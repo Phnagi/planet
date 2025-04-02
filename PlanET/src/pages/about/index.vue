@@ -5,8 +5,9 @@ import HelloWorld from '@/components/HelloWorld.vue';
 
 <template>
     <div class="wrapper">
-        <h1>this index</h1>
-        
+        <h1>this about index</h1>
+        <RouterLink to="/about">about-index</RouterLink>
+        <RouterLink to="/about/about2">about-about2</RouterLink>
     </div>
 
 </template>
