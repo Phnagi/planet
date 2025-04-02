@@ -4,9 +4,10 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
 import App from './App.vue'
+import planet from './planet.vue'
 import router from './router'
 
-const app = createApp(App)
+const app = createApp(planet)
 
 app.use(createPinia())
 app.use(router)

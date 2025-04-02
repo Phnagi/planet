@@ -8,7 +8,7 @@ import HelloWorld from './components/HelloWorld.vue'
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="hello! we are Planet, web will comming soon" />
+      <HelloWorld msg="this is app page" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
