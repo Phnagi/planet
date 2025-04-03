@@ -1,7 +1,12 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from '../components/HelloWorld.vue'
+//components
+import hamberger from '@/components/icons/hamberger.vue';
+import close from '@/components/icons/close.vue';
+import Navbar from '@/components/Navbar.vue';
+
+//mod
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import Lenis from 'lenis'
@@ -58,10 +63,12 @@ gsap.registerPlugin(ScrollTrigger);
 </script>
 
 <template>
-    <nav>
-        <RouterLink to="/">home</RouterLink>
-        <RouterLink to="/about">about</RouterLink>
-    </nav>
+    
+
+    <Navbar/> 
+        <!-- <hamberger  :sizeWidth="22"  :sizeHeight="20"/> -->
+        <!-- <close  :sizeWidth="37"  :sizeHeight="37"/> -->
+    
 
     <RouterView />
     <footer ref="footer">
@@ -80,31 +87,18 @@ gsap.registerPlugin(ScrollTrigger);
     //     }
     
     // }
-    *{
-        padding: 0px;
-        margin: 0px;
-        box-sizing: border-box;
-       
-
-    }
-    body {
-        padding: 0px;
-        margin: 0px;
-        box-sizing: border-box;
-        // background-color: gray;
-
-    }
-    nav{
-        // background: yellow;
-        height: 10dvh;
-        width: 100%;
-        display: flex;
-        position: fixed;
-        z-index: 2;
-        a{
-            color: black;
-        }
-    }
+    
+    // nav{
+    //     // background: yellow;
+    //     height: 10dvh;
+    //     width: 100%;
+    //     display: flex;
+    //     position: fixed;
+    //     z-index: 2;
+    //     a{
+    //         color: black;
+    //     }
+    // }
     footer{
         background: yellow;
         height: 100dvh;

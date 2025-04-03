@@ -16,5 +16,13 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        // 自動引入全域樣式
+        additionalData: `@use "@/assets/styles/_variables.scss" as *;`
+      },
+    },
+  },
 })

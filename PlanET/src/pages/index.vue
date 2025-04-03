@@ -1,11 +1,15 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router';
-import HelloWorld from '@/components/HelloWorld.vue';
+
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { onMounted, ref } from 'vue';
 import Lenis from 'lenis'
 
+
+// components
+import DynamicIcon from '@/components/icons/DynamicIcon.vue';
+//
 gsap.registerPlugin(ScrollTrigger)
 
 
@@ -57,7 +61,7 @@ onMounted(()=>{
             pin: true,
             scrub: 1,
             snap:1,
-            // markers: true,
+            markers: true,
         }
     });
 //第一段吸附 從wrapper到Box1的吸附
@@ -94,29 +98,11 @@ onMounted(()=>{
         ease: "none"
     });
 
-    // homePageTL_snap.to(homePageDom,{
-    //     y: 100*3,
-    //     duration: 3,
-    //     ease: "none"
-    // })
+    window.addEventListener("resize", () => {
 
-    // let homePagetween = gsap.to(racesDom,{
-    //     x:getScrollAmount,
-    //     duration:3,
-    //     ease:"none",
-    // })
+        ScrollTrigger.refresh();
 
-    // ScrollTrigger.create({
-    //     trigger:raceWrapperDom,
-    //     start:"top top",
-    //     end:`+=${getScrollAmount() * -1}`,
-    //     pin:true,
-    //     // pinSpacing: false,
-    //     animation:homePagetween,
-    //     scrub:1,
-    //     markers:true
-    // })
-
+    });
 });
 
 
@@ -128,7 +114,11 @@ onMounted(()=>{
 
 
         <div ref="wrapper" class="wrapper">
-            <h1>this index</h1>
+            <h1 class="tw">星球計畫 </h1>
+            <!-- <div class="iconBox">
+                <DynamicIcon name="arrow_down" />
+            </div> -->
+            
         </div>
 
         <div ref="raceWrapper" class="raceWrapper">
@@ -148,7 +138,18 @@ onMounted(()=>{
 </template>
 
 <style scoped lang="scss"  >
+
+.iconBox{
+    width: 200px;//調整寬
+    height: 200px;//調整高
+    position: relative;
+    display: flex;
+    
+}
 .homePageWrapper{
+    width: 100%;
+    // height: 100dvh;
+    overflow: hidden;
     .wrapper {
         height: 100dvh;
         width: 100%;
@@ -156,7 +157,7 @@ onMounted(()=>{
         position: relative;
         
         h1{
-            font-size: 100px;
+            
             color: black;
         }
     

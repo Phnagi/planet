@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router';
-import HelloWorld from '@/components/HelloWorld.vue';
+
 </script>
 
 <template>
@@ -14,7 +14,8 @@ import HelloWorld from '@/components/HelloWorld.vue';
 
 <style scoped lang="scss"  >
     .wrapper {
-  
+        height: 100dvh;
+        background-color:white ;
         h1{
             font-size: 100px;
             color: black;

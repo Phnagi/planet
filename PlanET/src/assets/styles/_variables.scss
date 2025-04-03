@@ -1,0 +1,557 @@
+// 字體設定
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+// 字體變數
+$font-family-TW: 'Noto Sans TC', sans-serif;
+$font-family-EN: "Urbanist", sans-serif;
+// 顏色變數
+$color-blue: #34BAF3;
+$color-green: #43B71B;
+$color-wrong: #F64D4D;
+$color-white: #f5f5f5;
+$color-gray_1: #787878;
+$color-text: #222222;
+
+// 字體大小變數
+    //web
+        //biggest_C
+        $web-FS-biggest_C: 48px; //fontsize
+        $web-LH-biggest_C: 180%; //lightHeight
+        $web-LP-biggest_C: 0.1*48px;//letterspace
+        $web-FW-biggest_C:500; //fontweight
+        //title_C
+        $web-FS-title_C: 36px;
+        $web-LH-title_C: 180%;
+        $web-LP-title_C: 0.1*36px;
+        $web-FW-title_C:500;
+        //title_E
+        $web-FS-title_E: 20px;
+        $web-LH-title_E: normal;
+        $web-LP-title_E: 0*20px;
+        $web-FW-title_E:700;
+        //SM_title_C
+        $web-FS-SM_title_C: 24px;
+        $web-LH-SM_title_C: normal;
+        $web-LP-SM_title_C: 0.16*24px;
+        $web-FW-SM_title_C:500;
+        //SM_title_E
+        $web-FS-SM_title_E: 16px;
+        $web-LH-SM_title_E: normal;
+        $web-LP-SM_title_E: 0px;
+        $web-FW-SM_title_E:700;
+        //SM_title2_C
+        $web-FS-SM_title2_C: 20px;
+        $web-LH-SM_title2_C: normal;
+        $web-LP-SM_title2_C: 0.10*20px;
+        $web-FW-SM_title2_C:500;
+        //SM_title2_E
+        $web-FS-SM_title2_E: 12px;
+        $web-LH-SM_title2_E: normal;
+        $web-LP-SM_title2_E: 0px;
+        $web-FW-SM_title2_E:700;
+        //text_C
+        $web-FS-text_C: 16px;
+        $web-LH-text_C: 160%;
+        $web-LP-text_C: 0.16*16px;
+        $web-FW-text_C:500;
+        //text_E
+        $web-FS-text_E: 14px;
+        $web-LH-text_E: normal;
+        $web-LP-text_E: 0px;
+        $web-FW-text_E:600;
+        //QRtext_C
+        $web-FS-QRtext_C: 12px;
+        $web-LH-QRtext_C: normal;
+        $web-LP-QRtext_C: 0.1*12px;
+        $web-FW-QRtext_C:500;
+        //QRtext_E
+        $web-FS-QRtext_E: 10px;
+        $web-LH-QRtext_E: normal;
+        $web-LP-QRtext_E: 0px;
+        $web-FW-QRtext_E:600;
+
+        //nev_C
+        $web-FS-nev_C: 14px;
+        $web-LH-nev_C: normal;
+        $web-LP-nev_C: 0.1*14px;
+        $web-FW-nev_C:500;
+    //ipad
+        //biggest_C
+        $ipad-FS-biggest_C: 48px; //fontsize
+        $ipad-LH-biggest_C: 180%; //lightHeight
+        $ipad-LP-biggest_C: 0.1*48px;//letterspace
+        $ipad-FW-biggest_C:500; //fontweight
+        //title_C
+        $ipad-FS-title_C: 32px;
+        $ipad-LH-title_C: 180%;
+        $ipad-LP-title_C: 0.1*32px;
+        $ipad-FW-title_C:500;
+        //title_E
+        $ipad-FS-title_E: 20px;
+        $ipad-LH-title_E: normal;
+        $ipad-LP-title_E: 0*20px;
+        $ipad-FW-title_E:700;
+        //SM_title_C
+        $ipad-FS-SM_title_C: 24px;
+        $ipad-LH-SM_title_C: normal;
+        $ipad-LP-SM_title_C: 0.16*24px;
+        $ipad-FW-SM_title_C:500;
+        //SM_title_E
+        $ipad-FS-SM_title_E: 16px;
+        $ipad-LH-SM_title_E: normal;
+        $ipad-LP-SM_title_E: 0px;
+        $ipad-FW-SM_title_E:700;
+        //SM_title2_C
+        $ipad-FS-SM_title2_C: 16px;
+        $ipad-LH-SM_title2_C: normal;
+        $ipad-LP-SM_title2_C: 0.16*16px;
+        $ipad-FW-SM_title2_C:500;
+        //SM_title2_E
+        $ipad-FS-SM_title2_E: 10px;
+        $ipad-LH-SM_title2_E: normal;
+        $ipad-LP-SM_title2_E: 0px;
+        $ipad-FW-SM_title2_E:700;
+        //text_C
+        $ipad-FS-text_C: 14px;
+        $ipad-LH-text_C: 160%;
+        $ipad-LP-text_C: 0.16*14px;
+        $ipad-FW-text_C:500;
+        //text_E
+        $ipad-FS-text_E: 14px;
+        $ipad-LH-text_E: normal;
+        $ipad-LP-text_E: 0px;
+        $ipad-FW-text_E:600;
+        //QRtext_C
+        $ipad-FS-QRtext_C: 12px;
+        $ipad-LH-QRtext_C: normal;
+        $ipad-LP-QRtext_C: 0.1*12px;
+        $ipad-FW-QRtext_C:500;
+        //QRtext_E
+        $ipad-FS-QRtext_E: 10px;
+        $ipad-LH-QRtext_E: normal;
+        $ipad-LP-QRtext_E: 0px;
+        $ipad-FW-QRtext_E:600;
+        //nev_C
+        $ipad-FS-nev_C: 26px;
+        $ipad-LH-nev_C: normal;
+        $ipad-LP-nev_C: 0.1*26px;
+        $ipad-FW-nev_C:600;
+    //phone
+        //biggest_C
+        $phone-FS-biggest_C: 36px; //fontsize
+        $phone-LH-biggest_C: 180%; //lightHeight
+        $phone-LP-biggest_C: 0.1*36px;//letterspace
+        $phone-FW-biggest_C:500; //fontweight
+        //title_C
+        $phone-FS-title_C: 32px;
+        $phone-LH-title_C: 180%;
+        $phone-LP-title_C: 0.1*32px;
+        $phone-FW-title_C:500;
+        //title_E
+        $phone-FS-title_E: 16px;
+        $phone-LH-title_E: normal;
+        $phone-LP-title_E: 0*16px;
+        $phone-FW-title_E:700;
+        //SM_title_C
+        $phone-FS-SM_title_C: 20px;
+        $phone-LH-SM_title_C: normal;
+        $phone-LP-SM_title_C: 0.16*20px;
+        $phone-FW-SM_title_C:500;
+        //SM_title_E
+        $phone-FS-SM_title_E: 12px;
+        $phone-LH-SM_title_E: normal;
+        $phone-LP-SM_title_E: 0px;
+        $phone-FW-SM_title_E:700;
+        //SM_title2_C
+        $phone-FS-SM_title2_C: 14px;
+        $phone-LH-SM_title2_C: normal;
+        $phone-LP-SM_title2_C: 0.16*14px;
+        $phone-FW-SM_title2_C:500;
+        //SM_title2_E
+        $phone-FS-SM_title2_E: 8px;
+        $phone-LH-SM_title2_E: normal;
+        $phone-LP-SM_title2_E: 0px;
+        $phone-FW-SM_title2_E:700;
+        //text_C
+        $phone-FS-text_C: 0px;
+        $phone-LH-text_C: 160%;
+        $phone-LP-text_C: 0.16*0px;
+        $phone-FW-text_C:500;
+        //text_E
+        $phone-FS-text_E: 12px;
+        $phone-LH-text_E: normal;
+        $phone-LP-text_E: 0px;
+        $phone-FW-text_E:600;
+        //QRtext_C
+        $phone-FS-QRtext_C: 10px;
+        $phone-LH-QRtext_C: normal;
+        $phone-LP-QRtext_C: 0.1*10px;
+        $phone-FW-QRtext_C:500;
+        //QRtext_E
+        $phone-FS-QRtext_E: 8px;
+        $phone-LH-QRtext_E: normal;
+        $phone-LP-QRtext_E: 0px;
+        $phone-FW-QRtext_E:600;
+        //nev_C
+        $phone-FS-nev_C: 26px;
+        $phone-LH-nev_C: normal;
+        $phone-LP-nev_C: 0.1*26px;
+        $phone-FW-nev_C:600;
+
+
+
+
+
+
+
+// 全域樣式
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+   
+
+}
+body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    // background-color: gray;
+
+}
+// body:lang(zh), body:lang(zh-TW), body:lang(zh-CN) {
+//     font-family: $font-family-TW,$font-family-En;
+// }
+
+//網頁
+@media (min-width: 1024px){
+    
+        
+    //biggest_C
+    h1{
+        &.tw{
+            font-family: $font-family-TW;
+            font-size: $web-FS-biggest_C;
+            line-height: $web-LH-biggest_C;
+            letter-spacing:$web-LP-biggest_C;
+            font-weight: $web-FW-biggest_C;
+        }
+    }
+
+    //title
+    h2{
+        &.tw{
+            font-family: $font-family-TW;
+            font-size: $web-FS-title_C;
+            line-height: $web-LH-title_C;
+            letter-spacing:$web-LP-title_C;
+            font-weight: $web-FW-title_C;
+        }
+        &.en{
+            font-family: $font-family-EN;
+            font-size: $web-FS-title_E;
+            line-height: $web-LH-title_E;
+            letter-spacing:$web-LP-title_E;
+            font-weight: $web-FW-title_E;
+        }
+    }
+
+    //SM_title
+    h3{
+        &.tw{
+            font-family: $font-family-TW;
+            font-size: $web-FS-SM_title_C;
+            line-height: $web-LH-SM_title_C;
+            letter-spacing:$web-LP-SM_title_C;
+            font-weight: $web-FW-SM_title_C;
+        }
+        &.en{
+            font-family: $font-family-EN;
+            font-size: $web-FS-SM_title_E;
+            line-height: $web-LH-SM_title_E;
+            letter-spacing:$web-LP-SM_title_E;
+            font-weight: $web-FW-SM_title_E;
+        }
+    }
+
+    //SM_title2
+    h4{
+        &.tw{
+            font-family: $font-family-TW;
+            font-size: $web-FS-SM_title2_C;
+            line-height: $web-LH-SM_title2_C;
+            letter-spacing:$web-LP-SM_title2_C;
+            font-weight: $web-FW-SM_title2_C;
+        }
+        &.en{
+            font-family: $font-family-EN;
+            font-size: $web-FS-SM_title2_E;
+            line-height: $web-LH-SM_title2_E;
+            letter-spacing:$web-LP-SM_title2_E;
+            font-weight: $web-FW-SM_title2_E;
+        }
+    }
+
+    //QRtext
+    h5{
+        &.tw{
+            font-family: $font-family-TW;
+            font-size: $web-FS-QRtext_C;
+            line-height: $web-LH-QRtext_C;
+            letter-spacing:$web-LP-QRtext_C;
+            font-weight: $web-FW-QRtext_C;
+        }
+        &.en{
+            font-family: $font-family-EN;
+            font-size: $web-FS-QRtext_E;
+            line-height: $web-LH-QRtext_E;
+            letter-spacing:$web-LP-QRtext_E;
+            font-weight: $web-FW-QRtext_E;
+        }
+    }
+
+
+    //text
+    p{
+        &.tw{
+            font-family: $font-family-TW;
+            font-size: $web-FS-text_C;
+            line-height: $web-LH-text_C;
+            letter-spacing:$web-LP-text_C;
+            font-weight: $web-FW-text_C;
+        }
+        &.en{
+            font-family: $font-family-EN;
+            font-size: $web-FS-text_E;
+            line-height: $web-LH-text_E;
+            letter-spacing:$web-LP-text_E;
+            font-weight: $web-FW-text_E;
+        }
+    }
+
+
+}
+
+
+//平板
+@media (min-width: 767px) and (max-width: 1024px){
+    
+        
+    //biggest_C
+    h1{
+        &.tw{
+            font-family: $font-family-TW;
+            font-size: $ipad-FS-biggest_C;
+            line-height: $ipad-LH-biggest_C;
+            letter-spacing:$ipad-LP-biggest_C;
+            font-weight: $ipad-FW-biggest_C;
+        }
+    }
+
+    //title
+    h2{
+        &.tw{
+            font-family: $font-family-TW;
+            font-size: $ipad-FS-title_C;
+            line-height: $ipad-LH-title_C;
+            letter-spacing:$ipad-LP-title_C;
+            font-weight: $ipad-FW-title_C;
+        }
+        &.en{
+            font-family: $font-family-EN;
+            font-size: $ipad-FS-title_E;
+            line-height: $ipad-LH-title_E;
+            letter-spacing:$ipad-LP-title_E;
+            font-weight: $ipad-FW-title_E;
+        }
+    }
+
+    //SM_title
+    h3{
+        &.tw{
+            font-family: $font-family-TW;
+            font-size: $ipad-FS-SM_title_C;
+            line-height: $ipad-LH-SM_title_C;
+            letter-spacing:$ipad-LP-SM_title_C;
+            font-weight: $ipad-FW-SM_title_C;
+        }
+        &.en{
+            font-family: $font-family-EN;
+            font-size: $ipad-FS-SM_title_E;
+            line-height: $ipad-LH-SM_title_E;
+            letter-spacing:$ipad-LP-SM_title_E;
+            font-weight: $ipad-FW-SM_title_E;
+        }
+    }
+
+    //SM_title2
+    h4{
+        &.tw{
+            font-family: $font-family-TW;
+            font-size: $ipad-FS-SM_title2_C;
+            line-height: $ipad-LH-SM_title2_C;
+            letter-spacing:$ipad-LP-SM_title2_C;
+            font-weight: $ipad-FW-SM_title2_C;
+        }
+        &.en{
+            font-family: $font-family-EN;
+            font-size: $ipad-FS-SM_title2_E;
+            line-height: $ipad-LH-SM_title2_E;
+            letter-spacing:$ipad-LP-SM_title2_E;
+            font-weight: $ipad-FW-SM_title2_E;
+        }
+    }
+
+    //QRtext
+    h5{
+        &.tw{
+            font-family: $font-family-TW;
+            font-size: $ipad-FS-QRtext_C;
+            line-height: $ipad-LH-QRtext_C;
+            letter-spacing:$ipad-LP-QRtext_C;
+            font-weight: $ipad-FW-QRtext_C;
+        }
+        &.en{
+            font-family: $font-family-EN;
+            font-size: $ipad-FS-QRtext_E;
+            line-height: $ipad-LH-QRtext_E;
+            letter-spacing:$ipad-LP-QRtext_E;
+            font-weight: $ipad-FW-QRtext_E;
+        }
+    }
+
+
+    //text
+    p{
+        &.tw{
+            font-family: $font-family-TW;
+            font-size: $ipad-FS-text_C;
+            line-height: $ipad-LH-text_C;
+            letter-spacing:$ipad-LP-text_C;
+            font-weight: $ipad-FW-text_C;
+        }
+        &.en{
+            font-family: $font-family-EN;
+            font-size: $ipad-FS-text_E;
+            line-height: $ipad-LH-text_E;
+            letter-spacing:$ipad-LP-text_E;
+            font-weight: $ipad-FW-text_E;
+        }
+    }
+
+
+
+
+}
+
+//手機
+@media (max-width: 767px){
+
+        
+    //biggest_C
+    h1{
+        &.tw{
+            font-family: $font-family-TW;
+            font-size: $phone-FS-biggest_C;
+            line-height: $phone-LH-biggest_C;
+            letter-spacing:$phone-LP-biggest_C;
+            font-weight: $phone-FW-biggest_C;
+        }
+    }
+
+    //title
+    h2{
+        &.tw{
+            font-family: $font-family-TW;
+            font-size: $phone-FS-title_C;
+            line-height: $phone-LH-title_C;
+            letter-spacing:$phone-LP-title_C;
+            font-weight: $phone-FW-title_C;
+        }
+        &.en{
+            font-family: $font-family-EN;
+            font-size: $phone-FS-title_E;
+            line-height: $phone-LH-title_E;
+            letter-spacing:$phone-LP-title_E;
+            font-weight: $phone-FW-title_E;
+        }
+    }
+
+    //SM_title
+    h3{
+        &.tw{
+            font-family: $font-family-TW;
+            font-size: $phone-FS-SM_title_C;
+            line-height: $phone-LH-SM_title_C;
+            letter-spacing:$phone-LP-SM_title_C;
+            font-weight: $phone-FW-SM_title_C;
+        }
+        &.en{
+            font-family: $font-family-EN;
+            font-size: $phone-FS-SM_title_E;
+            line-height: $phone-LH-SM_title_E;
+            letter-spacing:$phone-LP-SM_title_E;
+            font-weight: $phone-FW-SM_title_E;
+        }
+    }
+
+    //SM_title2
+    h4{
+        &.tw{
+            font-family: $font-family-TW;
+            font-size: $phone-FS-SM_title2_C;
+            line-height: $phone-LH-SM_title2_C;
+            letter-spacing:$phone-LP-SM_title2_C;
+            font-weight: $phone-FW-SM_title2_C;
+        }
+        &.en{
+            font-family: $font-family-EN;
+            font-size: $phone-FS-SM_title2_E;
+            line-height: $phone-LH-SM_title2_E;
+            letter-spacing:$phone-LP-SM_title2_E;
+            font-weight: $phone-FW-SM_title2_E;
+        }
+    }
+
+    //QRtext
+    h5{
+        &.tw{
+            font-family: $font-family-TW;
+            font-size: $phone-FS-QRtext_C;
+            line-height: $phone-LH-QRtext_C;
+            letter-spacing:$phone-LP-QRtext_C;
+            font-weight: $phone-FW-QRtext_C;
+        }
+        &.en{
+            font-family: $font-family-EN;
+            font-size: $phone-FS-QRtext_E;
+            line-height: $phone-LH-QRtext_E;
+            letter-spacing:$phone-LP-QRtext_E;
+            font-weight: $phone-FW-QRtext_E;
+        }
+    }
+
+
+    //text
+    p{
+        &.tw{
+            font-family: $font-family-TW;
+            font-size: $phone-FS-text_C;
+            line-height: $phone-LH-text_C;
+            letter-spacing:$phone-LP-text_C;
+            font-weight: $phone-FW-text_C;
+        }
+        &.en{
+            font-family: $font-family-EN;
+            font-size: $phone-FS-text_E;
+            line-height: $phone-LH-text_E;
+            letter-spacing:$phone-LP-text_E;
+            font-weight: $phone-FW-text_E;
+        }
+    }
+
+
+
+}
