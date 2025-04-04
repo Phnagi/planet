@@ -86,19 +86,19 @@ onBeforeUnmount(() => {
     <div v-if="RWDHandle_Web" class="navWeb">
         <div class="navLogo">
             <RouterLink to="/">
-                <img src="@/assets/image/index/logo.png" alt="">
+                <img src="@/assets/images/index/logo.png" alt="">
             </RouterLink>
 
         </div>
         <ul class="navOption">
             <li>
-                <RouterLink to="/">首頁</RouterLink>
+                <RouterLink to="/" class="homeBtn">首頁</RouterLink>
             </li>
             <li>
-                <RouterLink to="/about">作品介紹</RouterLink>
+                <RouterLink to="/about" class="aboutBtn">作品介紹</RouterLink>
             </li>
             <li>
-                <RouterLink to="/vi">視覺設計</RouterLink>
+                <RouterLink to="/vi" class="viBtn">視覺設計</RouterLink>
             </li>
 
 
@@ -107,7 +107,7 @@ onBeforeUnmount(() => {
     <div v-if="!RWDHandle_Web" class="navMoble">
         <div class="navLogo">
             <RouterLink to="/" @click="reset_NavMobilePage()">
-                <img src="@/assets/image/index/logo.png" alt="">
+                <img src="@/assets/images/index/logo.png" alt="">
             </RouterLink>
 
         </div>
@@ -200,8 +200,8 @@ onBeforeUnmount(() => {
                 align-items: center;
                 list-style: none;
                 li{
-                    display: flex;
-                        justify-content: end;
+                        display: flex;
+                        justify-content: flex-start;
                         align-items: center;
                         height: 100%;
                         width: 20%;
@@ -217,7 +217,7 @@ onBeforeUnmount(() => {
                         transition: 0.4s ease-in-out;
                         //flex
                         display: flex;
-                        justify-content: center;
+                        justify-content: flex-end;
                         align-items: center;
                         width: 100%;
                         height: 100%;
@@ -226,15 +226,19 @@ onBeforeUnmount(() => {
 
                             color: $color-green;
                         }
-
-
-                    }
-                    &:nth-child(1){
-                            justify-content: start;
+                        &.homeBtn{
+                            justify-content: flex-start;
                         }
-                    &:nth-child(2){
+                        &.aboutBtn{
                             justify-content: center;
+                        }
+                        &.viBtn{
+                            justify-content: flex-end;
+                        }
+
+
                     }
+
                     a.router-link-active{
                             color: $color-green;
                     }

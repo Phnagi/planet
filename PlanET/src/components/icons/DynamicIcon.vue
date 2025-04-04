@@ -9,6 +9,7 @@
         store: () => import('@/assets/icon/store.svg?raw'),
         train: () => import('@/assets/icon/train.svg?raw'),
         arrow_down: () => import('@/assets/icon/arrow_down.svg?raw'),
+        arrow_right: () => import('@/assets/icon/arrow_right.svg?raw'),
         home: () => import('@/assets/icon/home.svg?raw'),
         text: () => import('@/assets/icon/text.svg?raw'),
         hamberger: () => import('@/assets/icon/hamberger.svg?raw'),

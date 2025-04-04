@@ -1,0 +1,57 @@
+{
+    "index": {
+      "QRcode": [
+        {
+          "id": 1,
+          "title": "prototype_QRcode",
+          "type": "image",
+          "title_tw":"原型",
+          "title_en":"prototype",
+          "text_tw":"掃描QRcode即可體驗app的原型設計",
+          "text_en":"Scan the QR code to experience the app prototype design",
+          "link":"#",
+          "src": "/src/assets/images/index/prototype_QRcode.png"
+        },
+        {
+          "id": 2,
+          "title": "ig_QRcode",
+          "type": "image",
+          "title_tw":"IG社群",
+          "title_en":"IG",
+          "text_tw":"掃描QRcode即可體驗app的原型設計",
+          "text_en":"Scan the QR code to experience the app prototype design",
+          "link":"#",
+          "src": "/src/assets/images/index/ig_QRcode.png"
+        },
+        {
+          "id": 3,
+          "title": "yt_QRcode",
+          "type": "image",
+          "title_tw":"頻道",
+          "title_en":"channel",
+          "text_tw":"掃描QRcode即可體驗app的原型設計",
+          "text_en":"Scan the QR code to experience the app prototype design",
+          "link":"#",
+          "src": "/src/assets/images/index/yt_QRcode.png"
+        }
+      ],
+      "UI_image": [
+        {
+          "id": 4,
+          "title": "phone_home",
+          "type": "image",
+          "src": "/src/assets/images/index/phone_home.png"
+        }
+      ]
+    },
+    "footer":{
+      "logo":[
+        {
+          "id": "footer_logo",
+          "title": "footer_logo",
+          "type": "svg",
+          "src": "/src/assets/images/footer/footerLogo.svg"
+        }
+      ]
+    }
+}

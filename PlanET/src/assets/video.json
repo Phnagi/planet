@@ -1,0 +1,28 @@
+{
+    "index": [
+        {
+            "id": 1,
+            "title": "concept",
+            "type": "video",
+            "title_tw":"原型",
+            "title_en":"prototype",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "/src/assets/videos/index/concept.mp4"
+        },
+        {
+            "id": 2,
+            "title": "manipulation",
+            "type": "video",
+            "title_tw":"IG社群",
+            "title_en":"IG",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "/src/assets/videos/index/manipulation.mp4"
+        }
+    ]
+
+    
+}

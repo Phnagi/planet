@@ -5,32 +5,17 @@ import { RouterLink, RouterView } from 'vue-router'
 import hamberger from '@/components/icons/hamberger.vue';
 import close from '@/components/icons/close.vue';
 import Navbar from '@/components/Navbar.vue';
+import Footer from '@/components/Footer.vue';
 
 //mod
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import Lenis from 'lenis'
+// import Footer from '../components/Footer.vue';
 
 gsap.registerPlugin(ScrollTrigger);
-    let footer = ref(null);
+
     onMounted(() => {
-
-
-        let footerDom = footer.value;
-
-        //最後一段吸附 從Box1到Box3的吸附
-        let footer_snap = gsap.timeline({
-            scrollTrigger: {
-                trigger: footerDom,
-                start: `50% 100%`,//從box3往上一個Box2的高
-                end:  `100% 100%`,
-                // pin: true,
-                scrub: 1,
-                snap:1,
-                markers: true,
-            }
-        });
-
 
 
 
@@ -71,11 +56,7 @@ gsap.registerPlugin(ScrollTrigger);
     
 
     <RouterView />
-    <footer ref="footer">
-
-        <h1>this is footer</h1>
-
-    </footer>
+    <Footer/> 
 </template>
 
 <style lang="scss"  >
@@ -99,9 +80,9 @@ gsap.registerPlugin(ScrollTrigger);
     //         color: black;
     //     }
     // }
-    footer{
-        background: yellow;
-        height: 100dvh;
-        width: 100%;
-    }
+    // footer{
+    //     background: yellow;
+    //     height: 100dvh;
+    //     width: 100%;
+    // }
 </style>

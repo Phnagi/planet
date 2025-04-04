@@ -1,14 +1,19 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router';
-
+import axios from 'axios';
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import { onMounted, ref } from 'vue';
+import { onMounted, reactive, ref,watch } from 'vue';
 import Lenis from 'lenis'
 
-
+import ImageData from '@/assets/image.json';
 // components
 import DynamicIcon from '@/components/icons/DynamicIcon.vue';
+import IndexLanding from '../components/indexPage/IndexLanding.vue';
+import IndexRaceBox1 from '../components/indexPage/indexRaceBox1.vue';
+import IndexRaceBox2 from '../components/indexPage/IndexRaceBox2.vue';
+import IndexRaceBox3 from '../components/indexPage/IndexRaceBox3.vue';
+
 //
 gsap.registerPlugin(ScrollTrigger)
 
@@ -21,6 +26,10 @@ let wrapper = ref(null);
 let raceBox1 = ref(null);
 let raceBox2 = ref(null);
 let raceBox3 = ref(null);
+
+//存放api data
+// let imageData_QR = reactive({data:[]});
+// let imageData_UIimage = reactive({data:[]});
 onMounted(()=>{
     let racesDom = races.value;
     let raceWrapperDom = raceWrapper.value;
@@ -37,9 +46,9 @@ onMounted(()=>{
     // console.log('racesWidth',racesWidth);
     // console.log('amountToScroll',amountToScroll);
 
-    console.log(wrapperDom.offsetHeight, raceBoxDom_3.offsetHeight )
-    console.log(getScrollAmount());
-    console.log(getHomePageScrollDomAnout());
+    // console.log(wrapperDom.offsetHeight, raceBoxDom_3.offsetHeight )
+    // console.log(getScrollAmount());
+    // console.log(getHomePageScrollDomAnout());
 
     function getScrollAmount() {
 	let racesWidth = racesDom.scrollWidth;
@@ -61,7 +70,7 @@ onMounted(()=>{
             pin: true,
             scrub: 1,
             snap:1,
-            markers: true,
+            // markers: true,
         }
     });
 //第一段吸附 從wrapper到Box1的吸附
@@ -87,7 +96,7 @@ onMounted(()=>{
             // pin: true,
             scrub: 1,
             snap:1,
-            markers: true,
+            // markers: true,
         }
     });
 
@@ -103,6 +112,29 @@ onMounted(()=>{
         ScrollTrigger.refresh();
 
     });
+
+    //data.......................................................................
+    // async()=>{
+    //     try{
+    //         let res = await axios.get('../../public/data/image.json');
+    //         imageData.data = res;
+    //         console.log(imageData.data);
+    //     }catch(err){
+    //         console.log(`載入JSON失敗:${err}`);
+    //     }
+    // }
+    // imageData_QR.data = ImageData.index.QRcode;
+    // console.log(imageData_QR.data);
+    // imageData_UIimage.data = ImageData.index.UI_image;
+    // console.log(imageData_UIimage.data);
+
+    // watch(() => imageData_UIimage.data, (newData) => {
+    //     console.log("imageData_UIimage 已更新", newData);
+    // });
+    // watch(() => imageData_QR.data, (newData) => {
+    //     console.log("imageData_UIimage 已更新", newData);
+    // });
+
 });
 
 
@@ -114,38 +146,30 @@ onMounted(()=>{
 
 
         <div ref="wrapper" class="wrapper">
-            <h1 class="tw">星球計畫 </h1>
-            <!-- <div class="iconBox">
-                <DynamicIcon name="arrow_down" />
-            </div> -->
+            <IndexLanding/>
             
         </div>
 
         <div ref="raceWrapper" class="raceWrapper">
             <div ref="races" class="race">
                 <div ref="raceBox1" class="raceBox raceBox1">
-                    <h2>Box1</h2>
+                    <IndexRaceBox1/>
+
                 </div>
                 <div ref="raceBox2" class="raceBox raceBox2">
-                    <h2>Box2</h2>
+                    <IndexRaceBox2/>
                 </div>
             </div>
         </div>
         <div ref="raceBox3" class=" raceBox raceBox3">
-            <h2>Box3</h2>
+            <IndexRaceBox3/>
         </div>
     </div>
 </template>
 
 <style scoped lang="scss"  >
 
-.iconBox{
-    width: 200px;//調整寬
-    height: 200px;//調整高
-    position: relative;
-    display: flex;
-    
-}
+
 .homePageWrapper{
     width: 100%;
     // height: 100dvh;
@@ -153,13 +177,8 @@ onMounted(()=>{
     .wrapper {
         height: 100dvh;
         width: 100%;
-        background-color: rgb(212, 212, 255);
+        background-color: $color-white;
         position: relative;
-        
-        h1{
-            
-            color: black;
-        }
     
     }
     .raceBox{
@@ -177,13 +196,23 @@ onMounted(()=>{
             position: relative;
             display:flex;
             flex-wrap:nowrap;
-            background-color: antiquewhite;
+            background-color: $color-white;
+
             .raceBox1{
+
+                width:100dvw;
+                display: flex;
+                justify-content: center;
+                
+
 
 
             }
             .raceBox2{
-
+                width:100dvw;
+                display: flex;
+                justify-content: center;
+                
 
             }
         }
@@ -191,7 +220,12 @@ onMounted(()=>{
 
     .raceBox3{
 
-
+            height: 100dvh;
+            position: relative;
+            display:flex;
+            justify-content: center;
+            flex-wrap:nowrap;
+            background-color: $color-white;
     }
 }
    
