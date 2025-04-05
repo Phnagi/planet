@@ -10,7 +10,7 @@
           "text_tw":"掃描QRcode即可體驗app的原型設計",
           "text_en":"Scan the QR code to experience the app prototype design",
           "link":"#",
-          "src": "/src/assets/images/index/prototype_QRcode.png"
+          "src": "prototype_QRcode.png"
         },
         {
           "id": 2,
@@ -21,7 +21,7 @@
           "text_tw":"掃描QRcode即可體驗app的原型設計",
           "text_en":"Scan the QR code to experience the app prototype design",
           "link":"#",
-          "src": "/src/assets/images/index/ig_QRcode.png"
+          "src": "ig_QRcode.png"
         },
         {
           "id": 3,
@@ -32,7 +32,7 @@
           "text_tw":"掃描QRcode即可體驗app的原型設計",
           "text_en":"Scan the QR code to experience the app prototype design",
           "link":"#",
-          "src": "/src/assets/images/index/yt_QRcode.png"
+          "src": "yt_QRcode.png"
         }
       ],
       "UI_image": [
@@ -40,7 +40,7 @@
           "id": 4,
           "title": "phone_home",
           "type": "image",
-          "src": "/src/assets/images/index/phone_home.png"
+          "src": "phone_home.png"
         }
       ]
     },
@@ -50,8 +50,397 @@
           "id": "footer_logo",
           "title": "footer_logo",
           "type": "svg",
-          "src": "/src/assets/images/footer/footerLogo.svg"
+          "src": "footerLogo.svg"
         }
       ]
+    },
+    "about": {
+      "footprint": {
+        "index": [
+          {
+            "id": "footprint",
+            "title": "footprint",
+            "type": "image",
+            "title_tw":"交通碳足跡",
+            "title_en":"footprint",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "footprint.png"
+          },
+          {
+            "id": "buy",
+            "title": "buy",
+            "type": "image",
+            "title_tw":"購買碳足跡",
+            "title_en":"buy",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "buy.png"
+          }
+        ],
+        "edit_route": [
+          {
+            "id": "editRroute",
+            "title": "editRroute",
+            "type": "image",
+            "title_tw":"編輯路線",
+            "title_en":"editRroute",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "editRroute.png"
+          }
+        ],
+        "history": [
+          {
+            "id": "footprint_history",
+            "title": "footprint_history",
+            "type": "image",
+            "title_tw":"碳足跡紀錄",
+            "title_en":"footprint_history",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "footprint_history.png"
+          },
+          {
+            "id": "buy_history",
+            "title": "buy_history",
+            "type": "image",
+            "title_tw":"購買碳足跡紀錄",
+            "title_en":"buy_history",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "buy_history.png"
+          }
+        ],
+        "record": [
+          {
+            "id": "record",
+            "title": "record",
+            "type": "image",
+            "title_tw":"紀錄",
+            "title_en":"record",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "record.png"
+          },
+          {
+            "id": "recording",
+            "title": "recording",
+            "type": "image",
+            "title_tw":"紀錄中",
+            "title_en":"recording",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "recording.png"
+          }
+        ]
+      },
+      "mission":  {
+        "friend_challege": [
+          {
+            "id": "friendChallenge",
+            "title": "friendChallenge",
+            "type": "image",
+            "title_tw":"朋友挑戰",
+            "title_en":"friendChallenge",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "friendChallenge.png"
+          }
+        ],
+        "mission_club": [
+          {
+            "id": "mission_club",
+            "title": "mission_club",
+            "type": "image",
+            "title_tw":"任務社團",
+            "title_en":"mission_club",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "mission_club.png"
+          }
+        ],
+        "mission_task": [
+          {
+            "id": "mission",
+            "title": "mission",
+            "type": "image",
+            "title_tw":"任務",
+            "title_en":"mission",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "mission.png"
+          },
+          {
+            "id": "leaderBoard",
+            "title": "leaderBoard",
+            "type": "image",
+            "title_tw":"紀錄榜",
+            "title_en":"leaderBoard",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "leaderBoard.png"
+          }
+          
+        ],
+        "qr_task": [
+          {
+            "id": "qrTaskMain",
+            "title": "qrTaskMain",
+            "type": "image",
+            "title_tw":"QRcode挑戰",
+            "title_en":"qrTaskMain",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "qrTaskMain.png"
+          },
+          {
+            "id":"photoTask",
+            "title": "photoTask",
+            "type": "image",
+            "title_tw":"拍照任務",
+            "title_en":"photoTask",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "photoTask.png"
+          },
+          {
+            "id":"QATask",
+            "title": "QATask",
+            "type": "image",
+            "title_tw":"Q/A問答",
+            "title_en":"QATask",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "QATask.png"
+          },
+          {
+            "id":"distanceTask",
+            "title": "distanceTask",
+            "type": "image",
+            "title_tw":"距離任務",
+            "title_en":"distanceTask",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "distanceTask.png"
+          },
+          {
+            "id":"specialTask",
+            "title": "specialTask",
+            "type": "image",
+            "title_tw":"特殊任務",
+            "title_en":"specialTask",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "specialTask.png"
+          }
+        ]
+      },
+      "shop":{
+        "browse": [
+          {
+            "id": "shop_browse_map",
+            "title": "shop_browse_map",
+            "type": "image",
+            "title_tw":"瀏覽商品-地圖",
+            "title_en":"shop_browse_map",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "shop_browse_map.png"
+          },
+          {
+            "id": "shop_browse_list",
+            "title": "shop_browse_list",
+            "type": "image",
+            "title_tw":"瀏覽商品-清單",
+            "title_en":"shop_browse_list",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "shop_browse_list.png"
+          }
+        ],
+        "history": [
+          {
+            "id": "trade_history",
+            "title": "trade_history",
+            "type": "image",
+            "title_tw":"購買紀錄",
+            "title_en":"trade_history",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "trade_history.png"
+          }
+        ],
+        "mystore": [
+          {
+            "id": "my_store",
+            "title": "my_store",
+            "type": "image",
+            "title_tw":"我的商店",
+            "title_en":"my_store",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "my_store.png"
+          },
+          {
+            "id": "add_Item",
+            "title": "add_Item",
+            "type": "image",
+            "title_tw":"增加商品",
+            "title_en":"add_Item",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "add_Item.png"
+          }
+          
+        ],
+        "trade_seller": [
+          {
+            "id": "product_info",
+            "title": "product_info",
+            "type": "image",
+            "title_tw":"商品資訊",
+            "title_en":"product_info",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "product_info.png"
+          },
+          {
+            "id":"contract_seller",
+            "title": "contract_seller",
+            "type": "image",
+            "title_tw":"聯絡買家",
+            "title_en":"contract_seller",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "contract_seller.png"
+          },
+          {
+            "id":"confirm_product",
+            "title": "confirm_product",
+            "type": "image",
+            "title_tw":"確認商品",
+            "title_en":"confirm_product",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "confirm_product.png"
+          }
+        ],
+        "traffic": [
+          {
+            "id": "traffic",
+            "title": "traffic",
+            "type": "image",
+            "title_tw":"交通優惠",
+            "title_en":"traffic",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "traffic.png"
+          }
+        ]
+      },
+      "social":{
+        "browse": [
+          {
+            "id": "social",
+            "title": "social",
+            "type": "image",
+            "title_tw":"社群",
+            "title_en":"social",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "social.png"
+          },
+          {
+            "id": "post",
+            "title": "post",
+            "type": "image",
+            "title_tw":"貼文",
+            "title_en":"post",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "post.png"
+          }
+          
+        ],
+        "club": [
+          {
+            "id": "club",
+            "title": "club",
+            "type": "image",
+            "title_tw":"社群",
+            "title_en":"club",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "club.png"
+          },
+          {
+            "id": "club_browse",
+            "title": "club_browse",
+            "type": "image",
+            "title_tw":"社群瀏覽",
+            "title_en":"club_browse",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "club_browse.png"
+          }
+        ],
+        "editPost": [
+          {
+            "id": "editPost",
+            "title": "editPost",
+            "type": "image",
+            "title_tw":"編輯貼文",
+            "title_en":"editPost",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "editPost.png"
+          }
+        ],
+        "profile": [
+          {
+            "id": "profile",
+            "title": "profile",
+            "type": "image",
+            "title_tw":"個人頁面",
+            "title_en":"profile",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "profile.png"
+          }
+        ]
+      }
+
     }
 }

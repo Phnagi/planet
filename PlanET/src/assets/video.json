@@ -9,7 +9,7 @@
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
             "link":"#",
-            "src": "/src/assets/videos/index/concept.mp4"
+            "src": "concept.mp4"
         },
         {
             "id": 2,
@@ -20,7 +20,7 @@
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
             "link":"#",
-            "src": "/src/assets/videos/index/manipulation.mp4"
+            "src": "manipulation.mp4"
         }
     ]
 

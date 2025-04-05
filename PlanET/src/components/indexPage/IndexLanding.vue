@@ -13,29 +13,36 @@ import DynamicIcon from '@/components/icons/DynamicIcon.vue';
 gsap.registerPlugin(ScrollTrigger)
 //存放api data
 let imageData_QR = reactive({data:[]});
-let imageData_UIimage = reactive({data:[]});
+// let imageData_UIimage = reactive({data:[]});
+
+
+// 使用 Vite 的 glob 匯入圖片（會轉成 { [路徑]: 圖片URL }）
+const imageMap = import.meta.glob(
+  '@/assets/images/index/*.{png,jpg,jpeg,svg,webp}',
+  {
+    eager: true,
+    import: 'default',
+  }
+);
+
 onMounted(()=>{
    //data.......................................................................
-    // async()=>{
-    //     try{
-    //         let res = await axios.get('../../public/data/image.json');
-    //         imageData.data = res;
-    //         console.log(imageData.data);
-    //     }catch(err){
-    //         console.log(`載入JSON失敗:${err}`);
-    //     }
-    // }
-    imageData_QR.data = ImageData.index.QRcode;
-    console.log(imageData_QR.data);
-    imageData_UIimage.data = ImageData.index.UI_image;
-    console.log(imageData_UIimage.data);
 
-    watch(() => imageData_UIimage.data, (newData) => {
-        console.log("imageData_UIimage 已更新", newData);
-    });
+   //處理照片
+    // 把 JSON 中的 src 欄位轉換成實際圖片路徑
+    imageData_QR.data = ImageData.index.QRcode.map(item => ({
+        ...item,
+        src: imageMap[`/src/assets/images/index/${item.src}`]
+    }))
+
+
+    // imageData_QR.data = ImageData.index.QRcode;
+    console.log("imageData_QR",imageData_QR.data);
     watch(() => imageData_QR.data, (newData) => {
         console.log("imageData_UIimage 已更新", newData);
     });
+
+    
 });
 </script>
 

@@ -3,7 +3,7 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
-import App from './App.vue'
+
 import planet from './planet.vue'
 import router from './router'
 

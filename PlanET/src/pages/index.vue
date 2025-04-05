@@ -3,16 +3,16 @@ import { RouterLink, RouterView } from 'vue-router';
 import axios from 'axios';
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import { onMounted, reactive, ref,watch } from 'vue';
+import { onMounted, reactive, ref,watch ,onBeforeUnmount } from 'vue';
 import Lenis from 'lenis'
 
 import ImageData from '@/assets/image.json';
 // components
 import DynamicIcon from '@/components/icons/DynamicIcon.vue';
-import IndexLanding from '../components/indexPage/IndexLanding.vue';
-import IndexRaceBox1 from '../components/indexPage/indexRaceBox1.vue';
-import IndexRaceBox2 from '../components/indexPage/IndexRaceBox2.vue';
-import IndexRaceBox3 from '../components/indexPage/IndexRaceBox3.vue';
+import IndexLanding from '@/components/indexPage/IndexLanding.vue';
+import IndexRaceBox1 from '@/components/indexPage/indexRaceBox1.vue';
+import IndexRaceBox2 from '@/components/indexPage/IndexRaceBox2.vue';
+import IndexRaceBox3 from '@/components/indexPage/IndexRaceBox3.vue';
 
 //
 gsap.registerPlugin(ScrollTrigger)
@@ -30,6 +30,10 @@ let raceBox3 = ref(null);
 //存放api data
 // let imageData_QR = reactive({data:[]});
 // let imageData_UIimage = reactive({data:[]});
+
+//給子組件
+
+let Dom3location;
 onMounted(()=>{
     let racesDom = races.value;
     let raceWrapperDom = raceWrapper.value;
@@ -39,7 +43,8 @@ onMounted(()=>{
     let raceBoxDom_1=raceBox1.value;
     let raceBoxDom_2=raceBox2.value;
     let raceBoxDom_3=raceBox3.value;
-
+    //gsap timeline宣告
+    let homePageTL_1, homePageTL_snap1, homePageTL_snap2;
     // let racesWidth = racesDom.offsetWidth;
     // let amountToScroll = racesWidth - window.innerWidth;
     // console.log('racesDom',racesDom);
@@ -51,8 +56,8 @@ onMounted(()=>{
     // console.log(getHomePageScrollDomAnout());
 
     function getScrollAmount() {
-	let racesWidth = racesDom.scrollWidth;
-	return -(racesWidth - window.innerWidth);
+        let racesWidth = racesDom.scrollWidth;
+        return -(racesWidth - window.innerWidth);
     }
     function getHomePageScrollDomAnout(){
         let racesWidth = racesDom.scrollWidth;
@@ -60,60 +65,154 @@ onMounted(()=>{
 
         return homePageDomHeight;
     }
+
+    
    // 創建時間線
-   //橫向卷軸 snap為吸附
-   let homePageTL_1 = gsap.timeline({
-        scrollTrigger: {
-            trigger: raceWrapperDom,
-            start: "top top",
-            end: `+=${getScrollAmount() * -1}`,
-            pin: true,
-            scrub: 1,
-            snap:1,
-            // markers: true,
+    
+  function createTimelines() {
+    // 清除舊的 timelines 和 ScrollTriggers
+    // ScrollTrigger.getAll().forEach(trigger => trigger.kill()); //刪掉所有 ScrollTrigger 的 trigger（捲軸觸發器）
+    ScrollTrigger.getAll().forEach(trigger => {
+        if (trigger.vars.id === 'homePageTL_1') {
+            // console.log("ScrollTrigger",trigger)
+            trigger.kill();
+        }
+        if (trigger.vars.id === 'homePageTL_snap1') {
+            // console.log("ScrollTrigger",trigger)
+            trigger.kill();
+        }
+        if (trigger.vars.id === 'homePageTL_snap2') {
+            // console.log("ScrollTrigger",trigger)
+            trigger.kill();
         }
     });
-//第一段吸附 從wrapper到Box1的吸附
-    let homePageTL_snap1 = gsap.timeline({
-        scrollTrigger: {
-            trigger: homePageDom,
-            start: "top top",
-            end:  `${wrapperDom.offsetHeight*2} 100%`,
-            // pin: true,
-            scrub: 1,
-            snap:1,
-            // markers: true,
-        }
+    homePageTL_1?.kill(); //這段等於 if (homePageTL_1) {homePageTL_1.kill();} 刪掉創建的 gsap.timeline() 動畫本身
+    homePageTL_snap1?.kill();
+    homePageTL_snap2?.kill();
+
+    // 建立 timeline 1  橫向卷軸 snap為吸附
+    homePageTL_1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: raceWrapperDom,
+        start: "top top",
+        end: `+=${getScrollAmount() * -1}`,
+        pin: true,
+        scrub: 1,
+        snap: 1,
+        id: "homePageTL_1",
+      }
     });
 
-
-//最後一段吸附 從Box1到Box3的吸附
-    let homePageTL_snap2 = gsap.timeline({
-        scrollTrigger: {
-            trigger: raceBoxDom_3,
-            start: `${-raceBoxDom_2.offsetHeight} top`,//從box3往上一個Box2的高
-            end:  `100% 100%`,
-            // pin: true,
-            scrub: 1,
-            snap:1,
-            // markers: true,
-        }
-    });
-
-    // 在時間線上加入動畫
     homePageTL_1.to(racesDom, {
-        x: getScrollAmount(),
-        duration: 3,
-        ease: "none"
+      x: getScrollAmount(),
+      duration: 3,
+      ease: "none"
     });
 
-    window.addEventListener("resize", () => {
-
-        ScrollTrigger.refresh();
-
+    // timeline snap 1 第一段吸附 從wrapper到Box1的吸附
+     homePageTL_snap1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: homePageDom,
+        start: "top top",
+        end: `${wrapperDom.offsetHeight * 2} 100%`,
+        scrub: 1,
+        snap: 1,
+        id: "homePageTL_snap1",
+      }
     });
 
-    //data.......................................................................
+    // timeline snap 2 最後一段吸附 從Box2到Box3的吸附
+     homePageTL_snap2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: raceBoxDom_3,
+        start: `${-raceBoxDom_2.offsetHeight} top`,
+        end: `100% 100%`,
+        scrub: 1,
+        snap: 1,
+        id: "homePageTL_snap2",
+        // markers:true,
+      }
+    });
+
+    // 最後手動 refresh
+    ScrollTrigger.refresh();
+
+
+
+    //Dom3location
+    ScrollTrigger.getAll().forEach(trigger => {
+        if (trigger.vars.id === 'homePageTL_snap2') {
+            console.log("ScrollTrigger3",trigger.start)
+            Dom3location = trigger.start;
+        }
+    });
+    
+  }
+
+  createTimelines();
+
+  // 每次 resize 時，重新建立 timeline
+  const resizeHandler = () => {
+    createTimelines();
+  };
+
+  window.addEventListener("resize", resizeHandler);
+
+  onBeforeUnmount(() => {
+    window.removeEventListener("resize", resizeHandler);
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+  });
+  
+
+//原本...............................................................
+    //橫向卷軸 snap為吸附
+    //    let homePageTL_1 = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: raceWrapperDom,
+    //             start: "top top",
+    //             end: `+=${getScrollAmount() * -1}`,
+    //             pin: true,
+    //             scrub: 1,
+    //             snap:1,
+    //             // markers: true,
+    //         }
+    //     });
+    //第一段吸附 從wrapper到Box1的吸附
+        // let homePageTL_snap1 = gsap.timeline({
+        //     scrollTrigger: {
+        //         trigger: homePageDom,
+        //         start: "top top",
+        //         end:  `${wrapperDom.offsetHeight*2} 100%`,
+        //         // pin: true,
+        //         scrub: 1,
+        //         snap:1,
+        //         // markers: true,
+        //     }
+        // });
+
+
+    //最後一段吸附 從Box1到Box3的吸附
+        // let homePageTL_snap2 = gsap.timeline({
+        //     scrollTrigger: {
+        //         trigger: raceBoxDom_3,
+        //         start: `${-raceBoxDom_2.offsetHeight} top`,//從box3往上一個Box2的高
+        //         end:  `100% 100%`,
+        //         // pin: true,
+        //         scrub: 1,
+        //         snap:1,
+        //         // markers: true,
+        //     }
+        // });
+
+        // 在時間線上加入動畫
+        // homePageTL_1.to(racesDom, {
+        //     x: getScrollAmount(),
+        //     duration: 3,
+        //     ease: "none"
+        // });
+
+
+//data.......................................................................
     // async()=>{
     //     try{
     //         let res = await axios.get('../../public/data/image.json');
@@ -157,7 +256,7 @@ onMounted(()=>{
 
                 </div>
                 <div ref="raceBox2" class="raceBox raceBox2">
-                    <IndexRaceBox2/>
+                    <IndexRaceBox2 :Dom3location = 'Dom3location' />
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from 'vue-router';
 </script>
 
 <template>
-    <div class="wrapper">
+    <div class="wrapperBox">
 
         <RouterView />
 
@@ -13,12 +13,13 @@ import { RouterLink, RouterView } from 'vue-router';
 </template>
 
 <style scoped lang="scss"  >
-    .wrapper {
-  
-        h1{
-            font-size: 100px;
-            color: black;
-        }
+    .wrapperBox {
+        width: 100%;
+        height: 100dvh;
+        background-color:$color-white ;
+        display: flex;
+        justify-content: center;
+
     
     }
 

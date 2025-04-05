@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router';
 import axios from 'axios';
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import { onMounted, reactive, ref,watch } from 'vue';
+import { onMounted, reactive, ref,watch,onBeforeUnmount } from 'vue';
 import Lenis from 'lenis'
 
 import ImageData from '@/assets/image.json';
@@ -16,26 +16,118 @@ gsap.registerPlugin(ScrollTrigger)
 let imageData_QR = reactive({data:[]});
 let imageData_UIimage = reactive({data:[]});
 let video_concept = reactive({data:[]});
+
+//gsap 選取DOM
+let raceBox3_Content = ref(null);
+//gsap 時間縣
+let indexBox3_ani_tl ;
+let indexBox3_aniHandle = ref(false);
+
+// 使用 Vite 的 glob 匯入圖片（會轉成 { [路徑]: 圖片URL }）
+const imageMap = import.meta.glob(
+  '@/assets/images/index/*.{png,jpg,jpeg,svg,webp}',
+  {
+    eager: true,
+    import: 'default',
+  }
+);
+const vidoemap = import.meta.glob(
+  '@/assets/videos/index/*.mp4',
+  {
+    eager: true,
+    import: 'default',
+  }
+);
 onMounted(()=>{
-   //data.......................................................................
-    // async()=>{
-    //     try{
-    //         let res = await axios.get('../../public/data/image.json');
-    //         imageData.data = res;
-    //         console.log(imageData.data);
-    //     }catch(err){
-    //         console.log(`載入JSON失敗:${err}`);
-    //     }
-    // }
-    imageData_QR.data = ImageData.index.QRcode;
-    console.log(imageData_QR.data);
-    imageData_UIimage.data = ImageData.index.UI_image;
-    console.log(imageData_UIimage.data);
-    video_concept.data = VideoData.index;
-    console.log('s',video_concept.data[1]);
-    watch(() => imageData_UIimage.data, (newData) => {
-        console.log("imageData_UIimage 已更新", newData);
+
+
+    //gsap動畫
+    indexBox3_aniHandle = ref(false);
+    let raceBox3_ContentDom = raceBox3_Content.value;
+console.log("raceBox3_ContentDom",raceBox3_ContentDom)
+    // 創建時間縣
+    function createTimelines_indexBox3(){
+        ScrollTrigger.getAll().forEach(trigger => {
+            if (trigger.vars.id === 'indexBox3_ani_tl') {
+                // console.log("ScrollTrigger",trigger)
+                trigger.kill();
+            }
+        });
+        indexBox3_ani_tl?.kill();
+        indexBox3_ani_tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: raceBox3_ContentDom,//如果之後有增加卷軸數要改
+                start: `${raceBox3_ContentDom.offsetWidth*1.2} center`,//如果之後有增加卷軸數要改
+                end: `${raceBox3_ContentDom.offsetWidth+raceBox3_ContentDom.offsetHeight} center`,
+                scrub: true,
+                // markers: true,
+                id:"indexBox3_ani_tl",
+                onEnter: () => {
+                    indexBox3_aniHandle.value = true; // 滾動進入 trigger 範圍 (↓)
+                },
+                onLeaveBack: () => {
+                    indexBox3_aniHandle.value = false;// 滾動離開 trigger 的 end (↓)
+                },
+                // onEnterBack: () => {
+                //     indexBox3_aniHandle.value = true;// 從下方回來進入 trigger (↑)
+                // },
+
+                // onLeave: () => {
+                //     indexBox3_aniHandle.value = false;// 往回滾離開 trigger 的 start (↑)
+                // }
+            }
+        });
+        // 最後手動 refresh
+        ScrollTrigger.refresh();
+    }
+
+    createTimelines_indexBox3()
+    // 每次 resize 時，重新建立 timeline
+    const resizeHandler_indexBox3 = () => {
+        createTimelines_indexBox3();
+    };
+
+    window.addEventListener("resize", resizeHandler_indexBox3);
+
+    
+    onBeforeUnmount(() => {
+        window.removeEventListener("resize", resizeHandler_indexBox3);
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());//??
     });
+
+
+
+
+
+
+
+
+   //data.......................................................................
+
+    // imageData_QR.data = ImageData.index.QRcode;
+    // console.log(imageData_QR.data);
+    // imageData_UIimage.data = ImageData.index.UI_image;
+    // console.log(imageData_UIimage.data);
+    // video_concept.data = VideoData.index;
+    // console.log('s',video_concept.data[1]);
+    // watch(() => imageData_UIimage.data, (newData) => {
+    //     console.log("imageData_UIimage 已更新", newData);
+    // });
+
+
+    // 把 JSON 中的 src 欄位轉換成實際圖片路徑
+    //imageData_QR.data
+    imageData_QR.data = ImageData.index.QRcode.map(item => ({
+            ...item,
+            src: imageMap[`/src/assets/images/index/${item.src}`]
+        }))
+    //video_concept.data
+    video_concept.data = VideoData.index.map(item => ({
+            ...item,
+            src: vidoemap[`/src/assets/videos/index/${item.src}`]
+        }))
+        console.log("video_concept",video_concept.data[0]);
+
     watch(() => imageData_QR.data, (newData) => {
         console.log("imageData_UIimage 已更新", newData);
     });
@@ -46,18 +138,18 @@ onMounted(()=>{
 </script>
 
 <template>
-    <div class="raceBox3_Content">
-        <div class="raceBox3_video">
+    <div ref="raceBox3_Content" class="raceBox3_Content">
+        <div :class="['raceBox3_video',{raceBox3_videoAct:indexBox3_aniHandle},{raceBox3_videoUnAct:!indexBox3_aniHandle}]">
             <video v-if="video_concept.data.length" autoplay muted loop :src="video_concept.data[1].src"></video>
         </div>
         <div class="raceBox3_content">
-            <div class="raceBox3_qrCodeBox">
+            <div :class="['raceBox3_qrCodeBox',{raceBox3_qrAct:indexBox3_aniHandle},{raceBox3_qrUnAct:!indexBox3_aniHandle}]">
                 <div class="raceBox3_qrCodeImage">
-                    <img v-if="imageData_QR.data.length" :src="imageData_QR.data[1].src" alt="">
+                    <img v-if="imageData_QR.data.length" :src="imageData_QR.data[2].src" alt="">
                 </div>
                 <div class="raceBox3_qrCodeText">
-                    <h5 v-if="imageData_QR.data.length" class="tw">{{ imageData_QR.data[0].text_tw }}</h5>
-                    <h5 v-if="imageData_QR.data.length" class="en">{{ imageData_QR.data[0].text_en }}</h5>
+                    <h5 v-if="imageData_QR.data.length" class="tw">{{ imageData_QR.data[2].text_tw }}</h5>
+                    <h5 v-if="imageData_QR.data.length" class="en">{{ imageData_QR.data[2].text_en }}</h5>
                 </div>
         </div>
             <a href=""  class="raceBox3_textBox">
@@ -96,6 +188,7 @@ onMounted(()=>{
 
         @media(min-width: 767px) and (max-width: 1024px){
             flex-direction: column;
+
         }
         @media (max-width: 767px){
             flex-direction: column;
@@ -113,10 +206,25 @@ onMounted(()=>{
                 align-items: center;
                 justify-content: flex-start;
                 order: 2;
+
+            //raceBox3_video animation................................................................................
+                transition: opacity 0.5s ease-in-out 0s , transform 1s ease-in-out 0.2s;
+                &.raceBox3_videoAct{
+                    opacity: 1;
+                    transform: translateX(0dvh);
+                }
+                &.raceBox3_videoUnAct{
+                    opacity: 0;
+                    transform: translateX(100dvh);
+                }
             @media(min-width: 767px) and (max-width: 1024px){
                 width: 100%;
                 padding: 100px 0px 0px 0px;//60是navBar的高度100-60=40為上面的padding
                 order: 2;
+                @media(max-height: 800px){
+                    width: 100%;
+                    padding: 100px 0px 0px 0px;
+                }   
             }
             @media (max-width: 767px){
                 width: 100%;
@@ -151,6 +259,11 @@ onMounted(()=>{
                 width: 100%;
                 height: 80dvh;
                 padding: 40px 0px 40px 0px;//30是跟上面90-60=40
+                @media(max-height: 800px){
+                    flex-direction: row;
+                    width: 100%;
+                    
+                }   
             }
             @media (max-width: 767px){
                 order: 2;
@@ -168,12 +281,27 @@ onMounted(()=>{
                 order: 1;
                 justify-content: space-between;
                 // background-color: antiquewhite;
+
+                //raceBox3_qr animation................................................................................
+                transition: opacity 0.5s ease-in-out 0s , transform 1s ease-in-out 0.2s;
+                    &.raceBox3_qrAct{
+                        opacity: 1;
+                        transform: translateX(0dvh);
+                    }
+                    &.raceBox3_qrUnAct{
+                        opacity: 0;
+                        transform: translateX(-100dvh);
+                }
                 @media(min-width: 767px) and (max-width: 1024px){
                     order: 2;
                     flex-direction: column;
                     height: 300px;
                     width: 100%;
-                    
+                    @media(max-height: 800px){
+                        height: auto;
+                        width: auto;
+                        justify-content: flex-start;
+                    }
                 }
                 @media (max-width: 767px){
                     order: 2;
@@ -193,6 +321,10 @@ onMounted(()=>{
                     }
                     @media(min-width: 767px) and (max-width: 1024px){
                         width: 200px;
+                        @media(max-height: 800px){
+                            width: 100px;
+                            top: 0px;
+                        }
                     }
                     @media (max-width: 767px){
                         width:calc(30dvh*0.7) ;
@@ -208,6 +340,10 @@ onMounted(()=>{
                     order: 2;
                     @media(min-width: 767px) and (max-width: 1024px){
                         order: 1;
+                        @media(max-height: 800px){
+                            
+                            top: 0px;
+                        }
                     }
                     @media (max-width: 767px){
                         width:calc(30dvh*0.7) ;
@@ -234,7 +370,12 @@ onMounted(()=>{
                     position: relative;
                     top: -18px;
 
-                    
+                    @media(max-height: 800px){
+                        height: auto;
+                        width: 50%;
+                        justify-content: flex-start;
+                        top: -18px;
+                    }
                     
                 }
                 @media (max-width: 767px){
