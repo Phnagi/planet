@@ -60,10 +60,11 @@
           {
             "id": "footprint",
             "title": "footprint",
+            "path":"/about/footprint",
             "type": "image",
             "title_tw":"交通碳足跡",
             "title_en":"footprint",
-            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_tw":"顯示今日減少的交通碳足跡、消費所產生的碳足跡及獲得的積分，也能夠查看過去的歷史紀錄。",
             "text_en":"Scan the QR code to experience the app prototype design",
             "link":"#",
             "src": "footprint.png"
@@ -143,6 +144,31 @@
         ]
       },
       "mission":  {
+        "index": [
+          {
+            "id": "mission",
+            "title": "mission",
+            "path":"/about/mission",
+            "type": "image",
+            "title_tw":"任務",
+            "title_en":"mission",
+            "text_tw":"我們希望用戶能透過完成任務和參加 QR code挑戰來賺取積分並享受樂趣，同時學習環保知識。用戶還可以挑戰朋友，一起為環境採取行動。",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "mission.png"
+          },
+          {
+            "id": "qrTaskMain",
+            "title": "qrTaskMain",
+            "type": "image",
+            "title_tw":"QRcode挑戰",
+            "title_en":"qrTaskMain",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "qrTaskMain.png"
+          }
+        ],
         "friend_challege": [
           {
             "id": "friendChallenge",
@@ -252,7 +278,32 @@
           }
         ]
       },
-      "shop":{
+      "store":{
+        "index": [
+          {
+            "id": "shop_browse_map",
+            "title": "shop_browse_map",
+            "path":"/about/store",
+            "type": "image",
+            "title_tw":"瀏覽商品-地圖",
+            "title_en":"shop_browse_map",
+            "text_tw":"用戶可以使用獲得的積分在這裡交易二手商品，也可以上傳二手商品，促進物品的重複使用，減少浪費，此外還可以在這裡兌換交通里程折扣，鼓勵用戶使用大眾運輸。",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "shop_browse_map.png"
+          },
+          {
+            "id": "shop_browse_list",
+            "title": "shop_browse_list",
+            "type": "image",
+            "title_tw":"瀏覽商品-清單",
+            "title_en":"shop_browse_list",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "shop_browse_list.png"
+          }
+        ],
         "browse": [
           {
             "id": "shop_browse_map",
@@ -277,7 +328,7 @@
             "src": "shop_browse_list.png"
           }
         ],
-        "history": [
+        "trade_history": [
           {
             "id": "trade_history",
             "title": "trade_history",
@@ -365,6 +416,31 @@
         ]
       },
       "social":{
+        "index": [
+          {
+            "id": "social",
+            "title": "social",
+            "path":"/about/social",
+            "type": "image",
+            "title_tw":"社群",
+            "title_en":"social",
+            "text_tw":"管理你的部落格並分享交通路線。通過貼文內容、路線行程和照片吸引其他用戶，促使大家一起來改變出行方式，同時你也可以加入或創建社團，與大家一起維護路線、完成任務。",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "social.png"
+          },
+          {
+            "id": "club",
+            "title": "club",
+            "type": "image",
+            "title_tw":"社群",
+            "title_en":"club",
+            "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "text_en":"Scan the QR code to experience the app prototype design",
+            "link":"#",
+            "src": "club.png"
+          }
+        ],
         "browse": [
           {
             "id": "social",

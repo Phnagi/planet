@@ -14,7 +14,7 @@ import { RouterLink, RouterView } from 'vue-router';
 
 <style scoped lang="scss"  >
     .wrapperBox {
-        width: 100%;
+        width: 100dvw;
         height: 100dvh;
         background-color:$color-white ;
         display: flex;

@@ -18,7 +18,7 @@
         hamberger: () => import('@/assets/icon/hamberger.svg?raw'),
         close: () => import('@/assets/icon/close.svg?raw'),
         buy: () => import('@/assets/icon/buy.svg?raw'),
-        buy: () => import('@/assets/icon/buy.svg?raw'),
+        buy_gray: () => import('@/assets/icon/buy_gray.svg?raw'),
         card: () => import('@/assets/icon/card.svg?raw'),
         card_gray: () => import('@/assets/icon/card_gray.svg?raw'),
         club: () => import('@/assets/icon/club.svg?raw'),
@@ -37,8 +37,7 @@
         qrCode_gray: () => import('@/assets/icon/qrCode_gray.svg?raw'),
         record: () => import('@/assets/icon/record.svg?raw'),
         record_gray: () => import('@/assets/icon/record_gray.svg?raw'),
-        shop_gray: () => import('@/assets/icon/shop.svg?raw'),
-        shop_gray: () => import('@/assets/icon/shop_gray.svg?raw'),
+        shop: () => import('@/assets/icon/shop.svg?raw'),
         social: () => import('@/assets/icon/social.svg?raw'),
         social_gray: () => import('@/assets/icon/social_gray.svg?raw'),
 
