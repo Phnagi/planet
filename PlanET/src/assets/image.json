@@ -67,7 +67,32 @@
             "text_tw":"顯示今日減少的交通碳足跡、消費所產生的碳足跡及獲得的積分，也能夠查看過去的歷史紀錄。",
             "text_en":"Scan the QR code to experience the app prototype design",
             "link":"#",
-            "src": "footprint.png"
+            "src": "footprint.png",
+            "useIcon":[
+              {
+                "iconName":"walk",
+                "text":"移動碳足跡"
+              },
+              {
+                "iconName":"buy",
+                "text":"消費碳足跡"
+              },
+              {
+                "iconName":"history",
+                "text":"歷史紀錄"
+              },
+              {
+                "iconName":"edit",
+                "text":"編輯路線"
+              },
+              {
+                "iconName":"record",
+                "text":"錄製路線"
+              }
+
+            ]
+
+            
           },
           {
             "id": "buy",
@@ -155,7 +180,22 @@
             "text_tw":"我們希望用戶能透過完成任務和參加 QR code挑戰來賺取積分並享受樂趣，同時學習環保知識。用戶還可以挑戰朋友，一起為環境採取行動。",
             "text_en":"Scan the QR code to experience the app prototype design",
             "link":"#",
-            "src": "mission.png"
+            "src": "mission.png",
+            "useIcon":[
+              {
+                "iconName":"mission",
+                "text":"日常任務"
+              },
+              {
+                "iconName":"club",
+                "text":"社群任務"
+              },
+              {
+                "iconName":"qrCode",
+                "text":"QRcode任務"
+              }
+
+            ]
           },
           {
             "id": "qrTaskMain",
@@ -290,7 +330,22 @@
             "text_tw":"用戶可以使用獲得的積分在這裡交易二手商品，也可以上傳二手商品，促進物品的重複使用，減少浪費，此外還可以在這裡兌換交通里程折扣，鼓勵用戶使用大眾運輸。",
             "text_en":"Scan the QR code to experience the app prototype design",
             "link":"#",
-            "src": "shop_browse_map.png"
+            "src": "shop_browse_map.png",
+            "useIcon":[
+              {
+                "iconName":"store",
+                "text":"二手商店"
+              },
+              {
+                "iconName":"mystore",
+                "text":"我的商店"
+              },
+              {
+                "iconName":"card",
+                "text":"交通折抵"
+              }
+
+            ]
           },
           {
             "id": "shop_browse_list",
@@ -427,7 +482,22 @@
             "text_tw":"管理你的部落格並分享交通路線。通過貼文內容、路線行程和照片吸引其他用戶，促使大家一起來改變出行方式，同時你也可以加入或創建社團，與大家一起維護路線、完成任務。",
             "text_en":"Scan the QR code to experience the app prototype design",
             "link":"#",
-            "src": "social.png"
+            "src": "social.png",
+            "useIcon":[
+              {
+                "iconName":"social",
+                "text":"社群瀏覽"
+              },
+              {
+                "iconName":"club",
+                "text":"社團"
+              },
+              {
+                "iconName":"personal",
+                "text":"個人頁面"
+              }
+
+            ]
           },
           {
             "id": "club",
