@@ -15,10 +15,12 @@ import { RouterLink, RouterView } from 'vue-router';
 <style scoped lang="scss"  >
     .wrapperBox {
         width: 100dvw;
-        height: 100dvh;
+        // height: 100dvh;
         background-color:$color-white ;
         display: flex;
         justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
     
     }

@@ -221,6 +221,7 @@ onMounted(() => {
                 align-items: center;
                 justify-content:center;
                 padding: 60px 40px 40px 40px;
+                // gap: 20px;
         }
         .titleBox{
             width: 100%;
@@ -269,6 +270,7 @@ onMounted(() => {
         }
         .aboutInner_selectBox{
             position: relative;
+            bottom: 50px;
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -428,6 +430,7 @@ onMounted(() => {
         }
         .AbooutIndex_contentsBox{
             width: 450px;
+            height: 100%;
             position: relative;
             padding: 12px 0px 0px 0px;
             //flex
@@ -447,6 +450,7 @@ onMounted(() => {
                 order: 2;
                 padding: 0px 0px 0px 0px;
                 bottom: 2dvh;
+                gap: 20px;
             }
             .contentTextBox{
                 gap: 0px;
@@ -516,7 +520,7 @@ onMounted(() => {
                 //flex
                 display: flex;
                 justify-content: center;
-                align-items: flex-start;
+                align-items: flex-end;
                 @media(min-width: 767px) and (max-width: 1024px){
                     height: auto;
                     order: 1;

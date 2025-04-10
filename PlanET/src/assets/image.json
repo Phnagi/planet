@@ -62,12 +62,19 @@
             "title": "footprint",
             "path":"/about/footprint",
             "type": "image",
-            "title_tw":"交通碳足跡",
-            "title_en":"footprint",
+            "index_title_tw": "碳足跡",
+            "index_title_en":"Carbon footprint",
+            "index_text":"主頁上會顯示今日減少的交通碳足跡、消費所產生的碳足跡及獲得的積分，也能夠查看過去的歷史紀錄。",
+            "title_tw":"交通碳排放",
+            "title_en":"Transportation carbon footprint",
+            "SubTitle_tw":"首頁",
+            "SubTitle_en":"homePage",
             "text_tw":"顯示今日減少的交通碳足跡、消費所產生的碳足跡及獲得的積分，也能夠查看過去的歷史紀錄。",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"根據用戶日常交通方式（步行、騎自行車、搭乘公車、高速鐵路等）所產生的碳足跡，與使用汽車相比之下，給予相應的積分獎勵，而當用戶使用大眾運輸的頻率越高，獲得的積分也越多。",
             "link":"#",
             "src": "footprint.png",
+            "functional_map":"footprint",
             "useIcon":[
               {
                 "iconName":"walk",
@@ -98,12 +105,16 @@
             "id": "buy",
             "title": "buy",
             "type": "image",
-            "title_tw":"購買碳足跡",
-            "title_en":"buy",
+            "title_tw":"消費碳足跡",
+            "title_en":"Consumption carbon footprint",
+            "SubTitle_tw":"首頁",
+            "SubTitle_en":"homePage",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
+            "innertext":"紀錄用戶消費時所產生的碳足跡，幫助用戶了解從日常生活中所帶來的碳足跡。",
             "text_en":"Scan the QR code to experience the app prototype design",
             "link":"#",
-            "src": "buy.png"
+            "src": "buy.png",
+            "functional_map":"buy"
           }
         ],
         "edit_route": [
@@ -113,10 +124,14 @@
             "type": "image",
             "title_tw":"編輯路線",
             "title_en":"editRroute",
+            "SubTitle_tw":"首頁",
+            "SubTitle_en":"homePage",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"編輯頁面可以讓用戶編輯日前錄製的路線，完成後可上傳到自己的部落格並分享到社群，吸引更多人參與。",
             "link":"#",
-            "src": "editRroute.png"
+            "src": "editRoute.png",
+            "functional_map":"edit_route"
           }
         ],
         "history": [
@@ -126,10 +141,14 @@
             "type": "image",
             "title_tw":"碳足跡紀錄",
             "title_en":"footprint_history",
+            "SubTitle_tw":"首頁",
+            "SubTitle_en":"homePage",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"可查看交通碳排放以及消費碳足跡的歷史紀錄，方便使用者回顧。",
             "link":"#",
-            "src": "footprint_history.png"
+            "src": "footprint_history.png",
+            "functional_map":"history"
           },
           {
             "id": "buy_history",
@@ -137,10 +156,14 @@
             "type": "image",
             "title_tw":"購買碳足跡紀錄",
             "title_en":"buy_history",
+            "SubTitle_tw":"首頁",
+            "SubTitle_en":"homePage",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"可查看交通碳排放以及消費碳足跡的歷史紀錄，方便使用者回顧。",
             "link":"#",
-            "src": "buy_history.png"
+            "src": "buy_history.png",
+            "functional_map":"history"
           }
         ],
         "record": [
@@ -150,10 +173,14 @@
             "type": "image",
             "title_tw":"紀錄",
             "title_en":"record",
+            "SubTitle_tw":"首頁",
+            "SubTitle_en":"homePage",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"用戶可以自行錄製特定路線，像是旅行或減碳路線等，在錄製期間用戶也能夠隨時暫停，以便之後進行編輯和分享，同時，也保護您的隱私，移除不想分享的路段。",
             "link":"#",
-            "src": "record.png"
+            "src": "record.png",
+            "functional_map":"record"
           },
           {
             "id": "recording",
@@ -161,10 +188,14 @@
             "type": "image",
             "title_tw":"紀錄中",
             "title_en":"recording",
+            "SubTitle_tw":"首頁",
+            "SubTitle_en":"homePage",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"用戶可以自行錄製特定路線，像是旅行或減碳路線等，在錄製期間用戶也能夠隨時暫停，以便之後進行編輯和分享，同時，也保護您的隱私，移除不想分享的路段。",
             "link":"#",
-            "src": "recording.png"
+            "src": "recording.png",
+            "functional_map":"record"
           }
         ]
       },
@@ -177,8 +208,11 @@
             "type": "image",
             "title_tw":"任務",
             "title_en":"mission",
+            "SubTitle_tw":"任務頁面",
+            "SubTitle_en":"missionPage",
             "text_tw":"我們希望用戶能透過完成任務和參加 QR code挑戰來賺取積分並享受樂趣，同時學習環保知識。用戶還可以挑戰朋友，一起為環境採取行動。",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"我們希望用戶能透過完成任務和參加 QR code挑戰來賺取積分並享受樂趣，同時學習環保知識。用戶還可以挑戰朋友，一起為環境採取行動。",
             "link":"#",
             "src": "mission.png",
             "useIcon":[
@@ -203,8 +237,11 @@
             "type": "image",
             "title_tw":"QRcode挑戰",
             "title_en":"qrTaskMain",
+            "SubTitle_tw":"任務頁面",
+            "SubTitle_en":"missionPage",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"用戶可以自行錄製特定路線，像是旅行或減碳路線等，在錄製期間用戶也能夠隨時暫停，以便之後進行編輯和分享，同時，也保護您的隱私，移除不想分享的路段。",
             "link":"#",
             "src": "qrTaskMain.png"
           }
@@ -215,11 +252,15 @@
             "title": "friendChallenge",
             "type": "image",
             "title_tw":"朋友挑戰",
-            "title_en":"friendChallenge",
+            "title_en":"friend challenge",
+            "SubTitle_tw":"任務頁面",
+            "SubTitle_en":"missionPage",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"為了增加趣味性，我們新增了與朋友挑戰的任務，用戶可新增一個任務，並與朋友一起PK，獲勝者可以獲得任務挑戰的積分。",
             "link":"#",
-            "src": "friendChallenge.png"
+            "src": "friendChallenge.png",
+            "functional_map":"friendChallenge"
           }
         ],
         "mission_club": [
@@ -227,12 +268,16 @@
             "id": "mission_club",
             "title": "mission_club",
             "type": "image",
-            "title_tw":"任務社團",
-            "title_en":"mission_club",
+            "title_tw":"社團",
+            "title_en":"club",
+            "SubTitle_tw":"任務頁面",
+            "SubTitle_en":"missionPage",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"加入社團後，可以和社團一起完成任務來獲取額外點數，此外，管理員也可以自己新增任務，來讓社團更加活絡增加參與感。除此之外，官方也會發布特殊任務給各個社團，有可能是與他社團合作，也有可能是為某個節日而產生的特殊任務，完成後也可以獲得額外點數。",
             "link":"#",
-            "src": "mission_club.png"
+            "src": "mission_club.png",
+            "functional_map":"mission_club"
           }
         ],
         "mission_task": [
@@ -240,12 +285,16 @@
             "id": "mission",
             "title": "mission",
             "type": "image",
-            "title_tw":"任務",
-            "title_en":"mission",
+            "title_tw":"任務挑戰",
+            "title_en":"mission task",
+            "SubTitle_tw":"任務頁面",
+            "SubTitle_en":"missionPage",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"任務大致分成每週及每日任務，當完成每一項任務時可以獲得額外的點數，並且每天都可以查看自己的排名，此外完成任務也有機會獲得成就。",
             "link":"#",
-            "src": "mission.png"
+            "src": "mission.png",
+            "functional_map":"mission"
           },
           {
             "id": "leaderBoard",
@@ -253,10 +302,14 @@
             "type": "image",
             "title_tw":"紀錄榜",
             "title_en":"leaderBoard",
+            "SubTitle_tw":"任務頁面",
+            "SubTitle_en":"missionPage",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"用戶可以自行錄製特定路線，像是旅行或減碳路線等，在錄製期間用戶也能夠隨時暫停，以便之後進行編輯和分享，同時，也保護您的隱私，移除不想分享的路段。",
             "link":"#",
-            "src": "leaderBoard.png"
+            "src": "leaderBoard.png",
+            "functional_map":"mission"
           }
           
         ],
@@ -266,11 +319,16 @@
             "title": "qrTaskMain",
             "type": "image",
             "title_tw":"QRcode挑戰",
-            "title_en":"qrTaskMain",
+            "title_en":"qrcode task",
+            "SubTitle_tw":"任務頁面",
+            "SubTitle_en":"missionPage",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"我們希望能讓大家與現實生活產生更緊密的連結，因此設計了QRcode挑戰。在不同地點對應著不同類型的題目，主要分為，交通、消費、環保及特殊，其中，特殊任務會因應節日或是突發任務而發布，來讓整個過程更加有趣，而題目形式包括拍照任務、問答任務、距離任務及特殊任務。",
             "link":"#",
-            "src": "qrTaskMain.png"
+            "src": "qrTaskMain.png",
+            "functional_map":"qrtask"
+
           },
           {
             "id":"photoTask",
@@ -278,10 +336,15 @@
             "type": "image",
             "title_tw":"拍照任務",
             "title_en":"photoTask",
+            "SubTitle_tw":"任務頁面",
+            "SubTitle_en":"missionPage",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"用戶可以自行錄製特定路線，像是旅行或減碳路線等，在錄製期間用戶也能夠隨時暫停，以便之後進行編輯和分享，同時，也保護您的隱私，移除不想分享的路段。",
             "link":"#",
-            "src": "photoTask.png"
+            "src": "photoTask.png",
+            "functional_map":"qrtask_inner"
+
           },
           {
             "id":"QATask",
@@ -289,10 +352,14 @@
             "type": "image",
             "title_tw":"Q/A問答",
             "title_en":"QATask",
+            "SubTitle_tw":"任務頁面",
+            "SubTitle_en":"missionPage",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
             "link":"#",
-            "src": "QATask.png"
+            "src": "QATask.png",
+            "functional_map":"qrtask_inner"
+
           },
           {
             "id":"distanceTask",
@@ -300,10 +367,14 @@
             "type": "image",
             "title_tw":"距離任務",
             "title_en":"distanceTask",
+            "SubTitle_tw":"任務頁面",
+            "SubTitle_en":"missionPage",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
             "link":"#",
-            "src": "distanceTask.png"
+            "src": "distanceTask.png",
+            "functional_map":"qrtask_inner"
+
           },
           {
             "id":"specialTask",
@@ -311,10 +382,14 @@
             "type": "image",
             "title_tw":"特殊任務",
             "title_en":"specialTask",
+            "SubTitle_tw":"任務頁面",
+            "SubTitle_en":"missionPage",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
             "link":"#",
-            "src": "specialTask.png"
+            "src": "specialTask.png",
+            "functional_map":"qrtask_inner"
+
           }
         ]
       },
@@ -325,10 +400,13 @@
             "title": "shop_browse_map",
             "path":"/about/store",
             "type": "image",
-            "title_tw":"瀏覽商品-地圖",
-            "title_en":"shop_browse_map",
+            "title_tw":"二手商店",
+            "title_en":"secondHand store",
+            "SubTitle_tw":"二手商店頁面",
+            "SubTitle_en":"secondhand store Page",
             "text_tw":"用戶可以使用獲得的積分在這裡交易二手商品，也可以上傳二手商品，促進物品的重複使用，減少浪費，此外還可以在這裡兌換交通里程折扣，鼓勵用戶使用大眾運輸。",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"用戶可使用獲得的積分交易二手商品，也可上傳二手商品，促進物品的重複使用，此外還可兌換交通里程折扣，鼓勵用戶使用大眾運輸。",
             "link":"#",
             "src": "shop_browse_map.png",
             "useIcon":[
@@ -353,8 +431,11 @@
             "type": "image",
             "title_tw":"瀏覽商品-清單",
             "title_en":"shop_browse_list",
+            "SubTitle_tw":"二手商店頁面",
+            "SubTitle_en":"secondhand store Page",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"用戶可以自行錄製特定路線，像是旅行或減碳路線等，在錄製期間用戶也能夠隨時暫停，以便之後進行編輯和分享，同時，也保護您的隱私，移除不想分享的路段。",
             "link":"#",
             "src": "shop_browse_list.png"
           }
@@ -364,12 +445,16 @@
             "id": "shop_browse_map",
             "title": "shop_browse_map",
             "type": "image",
-            "title_tw":"瀏覽商品-地圖",
-            "title_en":"shop_browse_map",
+            "title_tw":"瀏覽商品",
+            "title_en":"Browse products",
+            "SubTitle_tw":"二手商店頁面",
+            "SubTitle_en":"secondhand store Page",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"除了透過地圖功能瀏覽附近的二手商品外，用戶還可以直接探索其他用戶上傳的商品，也可以使用搜索和篩選功能，更方便找到所需的商品。",
             "link":"#",
-            "src": "shop_browse_map.png"
+            "src": "shop_browse_map.png",
+            "functional_map":"browse"
           },
           {
             "id": "shop_browse_list",
@@ -377,10 +462,14 @@
             "type": "image",
             "title_tw":"瀏覽商品-清單",
             "title_en":"shop_browse_list",
+            "SubTitle_tw":"二手商店頁面",
+            "SubTitle_en":"secondhand store Page",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"除了透過地圖功能瀏覽附近的二手商品外，用戶還可以直接探索其他用戶上傳的商品，也可以使用搜索和篩選功能，更方便找到所需的商品。",
             "link":"#",
-            "src": "shop_browse_list.png"
+            "src": "shop_browse_list.png",
+            "functional_map":"browse"
           }
         ],
         "trade_history": [
@@ -389,11 +478,15 @@
             "title": "trade_history",
             "type": "image",
             "title_tw":"購買紀錄",
-            "title_en":"trade_history",
+            "title_en":"trade history",
+            "SubTitle_tw":"二手商店頁面",
+            "SubTitle_en":"secondhand store Page",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"可以查看自己的交易紀錄，包含購買記錄、販賣紀錄，還有未完成的交易等，方便自己查看還有管理。",
             "link":"#",
-            "src": "trade_history.png"
+            "src": "trade_history.png",
+            "functional_map":"trade_history"
           }
         ],
         "mystore": [
@@ -403,10 +496,14 @@
             "type": "image",
             "title_tw":"我的商店",
             "title_en":"my_store",
+            "SubTitle_tw":"二手商店頁面",
+            "SubTitle_en":"secondhand store Page",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"在「我的商店」頁面中，可以查看已上傳的商品的預訂情形，買家傳送的訊息則可以在「私訊」中查看，最後用戶可以自行決定上傳商品的詳細資訊。",
             "link":"#",
-            "src": "my_store.png"
+            "src": "my_store.png",
+            "functional_map":"mystore"
           },
           {
             "id": "add_Item",
@@ -414,10 +511,14 @@
             "type": "image",
             "title_tw":"增加商品",
             "title_en":"add_Item",
+            "SubTitle_tw":"二手商店頁面",
+            "SubTitle_en":"secondhand store Page",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"在「我的商店」頁面中，可以查看已上傳的商品的預訂情形，買家傳送的訊息則可以在「私訊」中查看，最後用戶可以自行決定上傳商品的詳細資訊。",
             "link":"#",
-            "src": "add_Item.png"
+            "src": "add_Item.png",
+            "functional_map":"mystore"
           }
           
         ],
@@ -426,12 +527,16 @@
             "id": "product_info",
             "title": "product_info",
             "type": "image",
-            "title_tw":"商品資訊",
-            "title_en":"product_info",
+            "title_tw":"商品交易",
+            "title_en":"product trading",
+            "SubTitle_tw":"二手商店頁面",
+            "SubTitle_en":"secondhand store Page",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"找到心儀的商品後可以與賣家進行對話，進一步確認商品資訊、面交時間及地點，最後買家會給予確認資訊，用戶確認無誤後，就可以完成預訂。",
             "link":"#",
-            "src": "product_info.png"
+            "src": "product_info.png",
+            "functional_map":"trade_seller"
           },
           {
             "id":"contract_seller",
@@ -439,10 +544,14 @@
             "type": "image",
             "title_tw":"聯絡買家",
             "title_en":"contract_seller",
+            "SubTitle_tw":"二手商店頁面",
+            "SubTitle_en":"secondhand store Page",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"找到心儀的商品後可以與賣家進行對話，進一步確認商品資訊、面交時間及地點，最後買家會給予確認資訊，用戶確認無誤後，就可以完成預訂。",
             "link":"#",
-            "src": "contract_seller.png"
+            "src": "contract_seller.png",
+            "functional_map":"trade_seller"
           },
           {
             "id":"confirm_product",
@@ -450,10 +559,14 @@
             "type": "image",
             "title_tw":"確認商品",
             "title_en":"confirm_product",
+            "SubTitle_tw":"二手商店頁面",
+            "SubTitle_en":"secondhand store Page",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"找到心儀的商品後可以與賣家進行對話，進一步確認商品資訊、面交時間及地點，最後買家會給予確認資訊，用戶確認無誤後，就可以完成預訂。",
             "link":"#",
-            "src": "confirm_product.png"
+            "src": "confirm_product.png",
+            "functional_map":"trade_seller"
           }
         ],
         "traffic": [
@@ -461,12 +574,16 @@
             "id": "traffic",
             "title": "traffic",
             "type": "image",
-            "title_tw":"交通優惠",
-            "title_en":"traffic",
+            "title_tw":"交通折扣",
+            "title_en":"Traffic discounts",
+            "SubTitle_tw":"二手商店頁面",
+            "SubTitle_en":"secondhand store Page",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"利用自己獲得的積分進行兌換不同大眾運輸的使用時間或里程數折扣，讓大家可以更加積極的使用，從而改變生活方式，而不同的交通工具所需的積分也不相同。",
             "link":"#",
-            "src": "traffic.png"
+            "src": "traffic.png",
+            "functional_map":"traffic"
           }
         ]
       },
@@ -479,10 +596,14 @@
             "type": "image",
             "title_tw":"社群",
             "title_en":"social",
+            "SubTitle_tw":"社群頁面",
+            "SubTitle_en":"social Page",
             "text_tw":"管理你的部落格並分享交通路線。通過貼文內容、路線行程和照片吸引其他用戶，促使大家一起來改變出行方式，同時你也可以加入或創建社團，與大家一起維護路線、完成任務。",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"管理你的部落格並分享交通路線。通過貼文內容、路線行程和照片吸引其他用戶，促使大家一起來改變出行方式，同時你也可以加入或創建社團，與大家一起維護路線、完成任務。",
             "link":"#",
             "src": "social.png",
+            "functional_map":"social",
             "useIcon":[
               {
                 "iconName":"social",
@@ -505,10 +626,15 @@
             "type": "image",
             "title_tw":"社群",
             "title_en":"club",
+            "SubTitle_tw":"二手商店頁面",
+            "SubTitle_en":"secondhand store Page",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"用戶可以自行錄製特定路線，像是旅行或減碳路線等，在錄製期間用戶也能夠隨時暫停，以便之後進行編輯和分享，同時，也保護您的隱私，移除不想分享的路段。",
             "link":"#",
-            "src": "club.png"
+            "src": "club.png",
+            "functional_map":"record"
+            
           }
         ],
         "browse": [
@@ -518,10 +644,14 @@
             "type": "image",
             "title_tw":"社群",
             "title_en":"social",
+            "SubTitle_tw":"社群頁面",
+            "SubTitle_en":"social Page",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"用戶可以輕鬆地瀏覽大家的貼文，並且進行分享和儲存，此外，你還可以在每篇貼文的底下留言，與其他用戶進行交流，分享你的看法和經驗，讓這個平台成為一個充滿活力的社群並推廣出去。",
             "link":"#",
-            "src": "social.png"
+            "src": "social.png",
+            "functional_map":"social_browse"
           },
           {
             "id": "post",
@@ -529,10 +659,14 @@
             "type": "image",
             "title_tw":"貼文",
             "title_en":"post",
+            "SubTitle_tw":"社群頁面",
+            "SubTitle_en":"social Page",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"用戶可以自行錄製特定路線，像是旅行或減碳路線等，在錄製期間用戶也能夠隨時暫停，以便之後進行編輯和分享，同時，也保護您的隱私，移除不想分享的路段。",
             "link":"#",
-            "src": "post.png"
+            "src": "post.png",
+            "functional_map":"post"
           }
           
         ],
@@ -541,12 +675,16 @@
             "id": "club",
             "title": "club",
             "type": "image",
-            "title_tw":"社群",
+            "title_tw":"社團",
             "title_en":"club",
+            "SubTitle_tw":"社群頁面",
+            "SubTitle_en":"social Page",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"你可以在「社群」內創建或加入一個社團。社團中，成員們將共同努力維護路線環境，以實現環保的目標。你可以在這裡發佈貼文、任務，分享你的想法和建議，讓更多人一同參與。藉由成員之間的凝聚力，一起共同維護環境。",
             "link":"#",
-            "src": "club.png"
+            "src": "club.png",
+            "functional_map":"club"
           },
           {
             "id": "club_browse",
@@ -554,10 +692,14 @@
             "type": "image",
             "title_tw":"社群瀏覽",
             "title_en":"club_browse",
+            "SubTitle_tw":"社群頁面",
+            "SubTitle_en":"social Page",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"用戶可以自行錄製特定路線，像是旅行或減碳路線等，在錄製期間用戶也能夠隨時暫停，以便之後進行編輯和分享，同時，也保護您的隱私，移除不想分享的路段。",
             "link":"#",
-            "src": "club_browse.png"
+            "src": "club_browse.png",
+            "functional_map":"club"
           }
         ],
         "editPost": [
@@ -567,10 +709,14 @@
             "type": "image",
             "title_tw":"編輯貼文",
             "title_en":"editPost",
+            "SubTitle_tw":"社群頁面",
+            "SubTitle_en":"social Page",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"可以透過分享自己利用大眾運輸的出遊方式或是平常的通勤路線等，發揮創意來吸引大家並經營自己的部落格，來讓大家可以更加投入環保的行列。",
             "link":"#",
-            "src": "editPost.png"
+            "src": "editPost.png",
+            "functional_map":"editPost"
           }
         ],
         "profile": [
@@ -580,13 +726,140 @@
             "type": "image",
             "title_tw":"個人頁面",
             "title_en":"profile",
+            "SubTitle_tw":"社群頁面",
+            "SubTitle_en":"social Page",
             "text_tw":"掃描QRcode即可體驗app的原型設計",
             "text_en":"Scan the QR code to experience the app prototype design",
+            "innertext":"你可以查看自己所有發佈的貼文，並且能夠查看是否有收到來自好友的邀請，此外，你還可以查看自己儲存的路線或貼文。",
             "link":"#",
-            "src": "profile.png"
+            "src": "profile.png",
+            "functional_map":"profile"
           }
         ]
       }
 
+    },
+    "VI":{
+      "index":{
+        "title_tw":"視覺識別",
+        "title_en":"visual identity",
+        "text":"透過現代簡約風格和環保色調的運用，傳達環保理念，並參考路牌指引的設計風格，指引人們朝向更加環保的方向前進。",
+        "image":[
+          {
+            "src":"main.jpg"
+          }
+        ]
+      },
+      "logo":{
+        "title_tw":"標誌設計",
+        "title_en":"logo design",
+        "text":"利用黃金比例中的圓形，並使用 1 號當成是主體「0」的基礎，3 號當作是與內圈比例的基礎，再利用 2 號當作右上角「度」的大小基礎。",
+        "title2_tw":"含意",
+        "title2_en":"meaning",
+        "text2":"此標誌象徵著「希望能夠減緩全球暖畫並減少溫室效應」。中央的圓形象徵著地球，再搭配右上角的小圓，整個標誌呈現出「0 度」的形狀。此外，中央的形狀代表一朵綻放的花，希望這個項目能像花朵一樣成功綻放。'PlanET' 名字來自於 planet 這個單字，其中 'E' 代表 'Earth'(地球)，而 'T' 代表 'Temperature'（溫度）。",
+        "image":[
+          {
+            "name":"logoMain",
+            "src":"logoMain.png"
+          },
+          {
+            "name":"logoGolden",
+            "src":"logoGolden.png"
+          },
+          {
+            "name":"logoGreen",
+            "src":"logoGreen.png"
+          },
+          {
+            "name":"graphics_full",
+            "src":"graphics_full.svg"
+          },
+          {
+            "name":"graphics",
+            "src":"graphics.svg"
+          },
+          {
+            "name":"vine",
+            "src":"vine.svg"
+          },
+          {
+            "name":"flower",
+            "src":"flower.svg"
+          }
+        ]
+      },
+      "typography":{
+        "title_tw":"字體",
+        "title_en":"typography",
+        "text":"",
+        "text2":"",
+        "image":[
+          {
+            "name":"typography_tw",
+            "src":"tw.svg"
+          },
+          {
+            "name":"typography_en",
+            "src":"en.svg"
+          }
+        ]
+      },
+      "color":{
+        "title_tw":"顏色",
+        "title_en":"color",
+        "text":"主色調我們選用綠色 (#43B71B) 來代表地球和環保，藍色 (#33B8F2) 則代表著海洋和降溫，希望藉由環保行動可以讓地球的溫度下降。",
+        "text2":"",
+        "title2_tw":"藍色與綠色",
+        "title2_en":"Blue and green",
+        "image":[
+          {
+            "name":"color_43B71B",
+            "src":"color_43B71B.svg"
+          },
+          {
+            "name":"color_34BAF3",
+            "src":"color_34BAF3.svg"
+          },
+          {
+            "name":"color_787878",
+            "src":"color_787878.svg"
+          },          
+          {
+            "name":"color_222222",
+            "src":"color_222222.svg"
+          },
+          {
+            "name":"color_F64D4D",
+            "src":"color_F64D4D.svg"
+          },
+          {
+            "name":"color_FFFFFF",
+            "src":"color_FFFFFF.svg"
+          }
+        ]
+      },
+      "brand":{
+        "title_tw":"顏色",
+        "title_en":"color",
+        "text":"主色調我們選用綠色 (#43B71B) 來代表地球和環保，藍色 (#33B8F2) 則代表著海洋和降溫，希望藉由環保行動可以讓地球的溫度下降。",
+        "text2":"",
+        "title2_tw":"藍色與綠色",
+        "title2_en":"Blue and green",
+        "image":[
+          {
+            "name":"work_ID",
+            "src":"work_ID.jpg"
+          },
+          {
+            "name":"business_card",
+            "src":"business_card.jpg"
+          },
+          {
+            "name":"invitation",
+            "src":"invitation.jpg"
+          }
+
+        ]
+      }
     }
 }

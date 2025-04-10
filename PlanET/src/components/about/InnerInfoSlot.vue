@@ -144,7 +144,8 @@ console.log("props.items",props.items[0])
         .innerinfo_imageBox{
             background: $color-gray_2;
             width: 75%;
-            
+            // padding: 100px 40px 40px 40px;
+            height: auto;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -158,7 +159,7 @@ console.log("props.items",props.items[0])
                 
             }
             .imgBox{
-                width: 350px;
+                width: 300px;
                 position: relative;
                 @media(min-width: 767px) and (max-width: 1024px){
                     width: 30dvh;
@@ -248,7 +249,8 @@ console.log("props.items",props.items[0])
                 display: grid;
                 grid-template-rows: repeat(3, 1fr); /* 每欄最多3個（共3列） */
                 grid-auto-flow: column;             /* 先塞滿一整列，再往右塞下一欄 */
-                // direction: rtl;   
+                // direction: rtl;  
+                justify-content: flex-end; 
                 gap: 0px 30px;                 /* 元素之間的間距 */
                 @media(min-width: 767px) and (max-width: 1024px){
                     height: auto;
