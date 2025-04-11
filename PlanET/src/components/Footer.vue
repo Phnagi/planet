@@ -64,13 +64,13 @@ onMounted(()=>{
         ScrollTrigger.refresh();
     }
 
-    createTimelines_footer();
+    // createTimelines_footer();
     // 每次 resize 時，重新建立 timeline
     const resizeHandler_footer = () => {
-        createTimelines_footer();
+        // createTimelines_footer();
     };
 
-    window.addEventListener("resize", resizeHandler_footer);
+    // window.addEventListener("resize", resizeHandler_footer);
 
     
     onBeforeUnmount(() => {
@@ -122,7 +122,7 @@ onMounted(()=>{
                         </div>
                     </div>
                     <div class="footerQRcodeBox">
-                        <div class="footerQRcode" v-for="(item,index) in footerQrcode.data" :key="item.id">
+                        <div class="footerQRcode" v-for="(item,index) in footerQrcode.data.slice(0, 3)" :key="item.id">
                             <a href="item.link">
                                 <div class="footer_QRimageBox">
                                     <img :src="item.src" alt="">

@@ -126,7 +126,7 @@ onMounted(()=>{
                     <h5 v-if="imageData_QR.data.length" class="en">{{ imageData_QR.data[0].text_en }}</h5>
                 </div>
         </div>
-            <a href=""  :class="['raceBox1_textBox',{raceBox1_textAct:indexBox1_aniHandle},{raceBox1_textUnAct:!indexBox1_aniHandle}]" >
+            <a href="https://www.figma.com/proto/ExiLOgWU5uU4WouOSrtYmn/PlanET_prototype?page-id=0%3A1&node-id=3001-81763&p=f&viewport=37%2C-68%2C0.02&t=9EAB5QV2gCtjeOkZ-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3001%3A81763&show-proto-sidebar=1"  :class="['raceBox1_textBox',{raceBox1_textAct:indexBox1_aniHandle},{raceBox1_textUnAct:!indexBox1_aniHandle}]" >
                 <div class="raceBox1_titleBox">
                     <h2 class="tw">UI原型設計</h2>
                     <h2 class="en">UI design</h2>

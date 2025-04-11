@@ -77,6 +77,11 @@ $color-text: #222222;
         $web-LH-nev_C: normal;
         $web-LP-nev_C: 0.1*14px;
         $web-FW-nev_C:500;
+        //usefont
+        $web-FS-usefont_E: 46px;
+        $web-LH-usefont_E: normal;
+        $web-LP-usefont_E: 0px;
+        $web-FW-usefont_E:500;
     //ipad
         //biggest_C
         $ipad-FS-biggest_C: 44px; //fontsize
@@ -138,6 +143,11 @@ $color-text: #222222;
         $ipad-LH-nev_C: normal;
         $ipad-LP-nev_C: 0.1*26px;
         $ipad-FW-nev_C:600;
+        //usefont
+        $ipad-FS-usefont_E: 46px;
+        $ipad-LH-usefont_E: normal;
+        $ipad-LP-usefont_E: 0px;
+        $ipad-FW-usefont_E:500;
     //phone
         //biggest_C
         $phone-FS-biggest_C: 36px; //fontsize
@@ -199,7 +209,11 @@ $color-text: #222222;
         $phone-LH-nev_C: normal;
         $phone-LP-nev_C: 0.1*26px;
         $phone-FW-nev_C:600;
-
+        //usefont
+        $phone-FS-usefont_E: 36px;
+        $phone-LH-usefont_E: normal;
+        $phone-LP-usefont_E: 0px;
+        $phone-FW-usefont_E:500;
 
 
 
@@ -232,6 +246,7 @@ body {
         
     //biggest_C
     h1{
+        color: $color-text;
         &.tw{
             font-family: $font-family-TW;
             font-size: $web-FS-biggest_C;
@@ -243,6 +258,7 @@ body {
 
     //title
     h2{
+        color: $color-text;
         &.tw{
             font-family: $font-family-TW;
             font-size: $web-FS-title_C;
@@ -261,6 +277,7 @@ body {
 
     //SM_title
     h3{
+        color: $color-text;
         &.tw{
             font-family: $font-family-TW;
             font-size: $web-FS-SM_title_C;
@@ -279,6 +296,7 @@ body {
 
     //SM_title2
     h4{
+        color: $color-text;
         &.tw{
             font-family: $font-family-TW;
             font-size: $web-FS-SM_title2_C;
@@ -297,6 +315,7 @@ body {
 
     //QRtext
     h5{
+        color: $color-text;
         &.tw{
             font-family: $font-family-TW;
             font-size: $web-FS-QRtext_C;
@@ -316,12 +335,20 @@ body {
 
     //text
     p{
+        color: $color-text;
         &.tw{
             font-family: $font-family-TW;
             font-size: $web-FS-text_C;
             line-height: $web-LH-text_C;
             letter-spacing:$web-LP-text_C;
             font-weight: $web-FW-text_C;
+            &.usefont{
+                font-family: $font-family-TW;
+                font-size: $web-FS-usefont_E;
+                line-height: $web-LH-usefont_E;
+                letter-spacing:$web-LP-usefont_E;
+                font-weight: $web-FW-usefont_E;
+            }
         }
         &.en{
             font-family: $font-family-EN;
@@ -329,8 +356,18 @@ body {
             line-height: $web-LH-text_E;
             letter-spacing:$web-LP-text_E;
             font-weight: $web-FW-text_E;
+            &.usefont{
+                font-family: $font-family-EN;
+                font-size: $web-FS-usefont_E;
+                line-height: $web-LH-usefont_E;
+                letter-spacing:$web-LP-usefont_E;
+                font-weight: $web-FW-usefont_E;
+            }
         }
+        //usefont
+
     }
+
 
 
 }
@@ -342,6 +379,7 @@ body {
         
     //biggest_C
     h1{
+        color: $color-text;
         &.tw{
             font-family: $font-family-TW;
             font-size: $ipad-FS-biggest_C;
@@ -353,6 +391,7 @@ body {
 
     //title
     h2{
+        color: $color-text;
         &.tw{
             font-family: $font-family-TW;
             font-size: $ipad-FS-title_C;
@@ -371,6 +410,7 @@ body {
 
     //SM_title
     h3{
+        color: $color-text;
         &.tw{
             font-family: $font-family-TW;
             font-size: $ipad-FS-SM_title_C;
@@ -389,6 +429,7 @@ body {
 
     //SM_title2
     h4{
+        color: $color-text;
         &.tw{
             font-family: $font-family-TW;
             font-size: $ipad-FS-SM_title2_C;
@@ -407,6 +448,7 @@ body {
 
     //QRtext
     h5{
+        color: $color-text;
         &.tw{
             font-family: $font-family-TW;
             font-size: $ipad-FS-QRtext_C;
@@ -426,12 +468,20 @@ body {
 
     //text
     p{
+        color: $color-text;
         &.tw{
             font-family: $font-family-TW;
             font-size: $ipad-FS-text_C;
             line-height: $ipad-LH-text_C;
             letter-spacing:$ipad-LP-text_C;
             font-weight: $ipad-FW-text_C;
+            &.usefont{
+                font-family: $font-family-TW;
+                font-size: $ipad-FS-usefont_E;
+                line-height: $ipad-LH-usefont_E;
+                letter-spacing:$ipad-LP-usefont_E;
+                font-weight: $ipad-FW-usefont_E;
+            }
         }
         &.en{
             font-family: $font-family-EN;
@@ -439,6 +489,13 @@ body {
             line-height: $ipad-LH-text_E;
             letter-spacing:$ipad-LP-text_E;
             font-weight: $ipad-FW-text_E;
+            &.usefont{
+                font-family: $font-family-EN;
+                font-size: $ipad-FS-usefont_E;
+                line-height: $ipad-LH-usefont_E;
+                letter-spacing:$ipad-LP-usefont_E;
+                font-weight: $ipad-FW-usefont_E;
+            }
         }
     }
 
@@ -453,6 +510,7 @@ body {
         
     //biggest_C
     h1{
+        color: $color-text;
         &.tw{
             font-family: $font-family-TW;
             font-size: $phone-FS-biggest_C;
@@ -464,6 +522,7 @@ body {
 
     //title
     h2{
+        color: $color-text;
         &.tw{
             font-family: $font-family-TW;
             font-size: $phone-FS-title_C;
@@ -482,6 +541,7 @@ body {
 
     //SM_title
     h3{
+        color: $color-text;
         &.tw{
             font-family: $font-family-TW;
             font-size: $phone-FS-SM_title_C;
@@ -500,6 +560,7 @@ body {
 
     //SM_title2
     h4{
+        color: $color-text;
         &.tw{
             font-family: $font-family-TW;
             font-size: $phone-FS-SM_title2_C;
@@ -518,6 +579,7 @@ body {
 
     //QRtext
     h5{
+        color: $color-text;
         &.tw{
             font-family: $font-family-TW;
             font-size: $phone-FS-QRtext_C;
@@ -537,12 +599,20 @@ body {
 
     //text
     p{
+        color: $color-text;
         &.tw{
             font-family: $font-family-TW;
             font-size: $phone-FS-text_C;
             line-height: $phone-LH-text_C;
             letter-spacing:$phone-LP-text_C;
             font-weight: $phone-FW-text_C;
+            &.usefont{
+                font-family: $font-family-TW;
+                font-size: $phone-FS-usefont_E;
+                line-height: $phone-LH-usefont_E;
+                letter-spacing:$phone-LP-usefont_E;
+                font-weight: $phone-FW-usefont_E;
+            }
         }
         &.en{
             font-family: $font-family-EN;
@@ -550,6 +620,13 @@ body {
             line-height: $phone-LH-text_E;
             letter-spacing:$phone-LP-text_E;
             font-weight: $phone-FW-text_E;
+            &.usefont{
+                font-family: $font-family-EN;
+                font-size: $phone-FS-usefont_E;
+                line-height: $phone-LH-usefont_E;
+                letter-spacing:$phone-LP-usefont_E;
+                font-weight: $phone-FW-usefont_E;
+            }
         }
     }
 

@@ -9,7 +9,7 @@
           "title_en":"prototype",
           "text_tw":"掃描QRcode即可體驗app的原型設計",
           "text_en":"Scan the QR code to experience the app prototype design",
-          "link":"#",
+          "link":"https://www.figma.com/proto/ExiLOgWU5uU4WouOSrtYmn/PlanET_prototype?page-id=0%3A1&node-id=3001-81763&p=f&viewport=37%2C-68%2C0.02&t=9EAB5QV2gCtjeOkZ-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3001%3A81763&show-proto-sidebar=1",
           "src": "prototype_QRcode.png"
         },
         {
@@ -20,7 +20,7 @@
           "title_en":"IG",
           "text_tw":"掃描QRcode即可體驗app的原型設計",
           "text_en":"Scan the QR code to experience the app prototype design",
-          "link":"#",
+          "link":"https://www.instagram.com/planet.114?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
           "src": "ig_QRcode.png"
         },
         {
@@ -31,8 +31,30 @@
           "title_en":"channel",
           "text_tw":"掃描QRcode即可體驗app的原型設計",
           "text_en":"Scan the QR code to experience the app prototype design",
-          "link":"#",
+          "link":"https://youtube.com/@planet-w5u?si=jIjjzyu4hTh_QSbV",
           "src": "yt_QRcode.png"
+        },
+        {
+          "id": 4,
+          "title": "concept",
+          "type": "image",
+          "title_tw":"概念影片",
+          "title_en":"concept video",
+          "text_tw":"掃描查看概念影片",
+          "text_en":"Scan the QR code to experience the app prototype design",
+          "link":"https://youtu.be/p99WEaJeUOs?si=bi8mQHfckBjHGLbf",
+          "src": "concept.png"
+        },
+        {
+          "id": 5,
+          "title": "instructional",
+          "type": "image",
+          "title_tw":"操作影片",
+          "title_en":"instructional video",
+          "text_tw":"掃描查看操作影片",
+          "text_en":"Scan the QR code to experience the app prototype design",
+          "link":"https://youtu.be/k1GvqpMOfGs?si=-HowJO_sZokuaHYG",
+          "src": "instructional.png"
         }
       ],
       "UI_image": [
@@ -404,7 +426,7 @@
             "title_en":"secondHand store",
             "SubTitle_tw":"二手商店頁面",
             "SubTitle_en":"secondhand store Page",
-            "text_tw":"用戶可以使用獲得的積分在這裡交易二手商品，也可以上傳二手商品，促進物品的重複使用，減少浪費，此外還可以在這裡兌換交通里程折扣，鼓勵用戶使用大眾運輸。",
+            "text_tw":"用戶可使用獲得的積分交易二手商品，也可上傳二手商品，促進物品的重複使用，此外還可兌換交通里程折扣，鼓勵用戶使用大眾運輸。",
             "text_en":"Scan the QR code to experience the app prototype design",
             "innertext":"用戶可使用獲得的積分交易二手商品，也可上傳二手商品，促進物品的重複使用，此外還可兌換交通里程折扣，鼓勵用戶使用大眾運輸。",
             "link":"#",
@@ -598,7 +620,7 @@
             "title_en":"social",
             "SubTitle_tw":"社群頁面",
             "SubTitle_en":"social Page",
-            "text_tw":"管理你的部落格並分享交通路線。通過貼文內容、路線行程和照片吸引其他用戶，促使大家一起來改變出行方式，同時你也可以加入或創建社團，與大家一起維護路線、完成任務。",
+            "text_tw":"管理你的部落格並分享交通路線。促使大家一起來改變出行方式，同時你也可以加入或創建社團，與大家一起維護路線、完成任務。",
             "text_en":"Scan the QR code to experience the app prototype design",
             "innertext":"管理你的部落格並分享交通路線。通過貼文內容、路線行程和照片吸引其他用戶，促使大家一起來改變出行方式，同時你也可以加入或創建社團，與大家一起維護路線、完成任務。",
             "link":"#",
@@ -788,11 +810,66 @@
           }
         ]
       },
+      "graphics":{
+        "title_tw":"輔助圖形",
+        "title_en":"Supporting graphics",
+        "text":" 就好像兩隻手握在一起，兩者相互牽連、共同一起保護地球，且輔助圖形可連續在一起，變成一朵花，也可以進行串聯。",
+        "title2_tw":"藤蔓",
+        "title2_en":"vine",
+        "text2":"由許多的手共同串聯起來，象徵著由大家一起合作，團結一致，共同保護地球。",
+        "title3_tw":"花朵",
+        "title3_en":"flower",
+        "text3":"由輔助圖形結合，象徵能讓個計畫開花結果。",
+        "image":[
+          {
+            "name":"graphics_full",
+            "src":"graphics_full.svg"
+          },
+          {
+            "name":"graphics",
+            "src":"graphics.svg"
+          },
+          {
+            "name":"vine",
+            "src":"vine.svg"
+          },
+          {
+            "name":"flower",
+            "src":"flower.svg"
+          }
+        ]
+      },
       "typography":{
         "title_tw":"字體",
         "title_en":"typography",
         "text":"",
         "text2":"",
+        "chinese":{
+          "font":"Noto sans TC",
+          "title_tw":"中文",
+          "title_en":"chinese",
+          "title_tw2":"字體",
+          "title_en2":"chinese",
+          "title_tw3":"字重",
+          "title_en3":"light-block",
+          "innerTitle":"字距",
+          "innerText":"字體大小的10%或16%",
+          "innerTitle2":"行距",
+          "innerText2":"字體大小的160%"
+        },
+        "english":{
+          "font":"Urbanist",
+          "title_tw":"英文",
+          "title_en":"chinese",
+          "title_tw2":"字體",
+          "title_en2":"chinese",
+          "title_tw3":"字重",
+          "title_en3":"light-block",
+          "innerTitle":"字距",
+          "innerText":"字體大小的0%或6%",
+          "innerTitle2":"行距",
+          "innerText2":"字體大小的120%"
+        },
         "image":[
           {
             "name":"typography_tw",
@@ -814,26 +891,44 @@
         "image":[
           {
             "name":"color_43B71B",
+            "color":"#43B71B",
+            "rgb":"R:67 G:183 B:27 ",
+            "cmyk":"C:66 M:0 Y:100 K:0",
             "src":"color_43B71B.svg"
           },
           {
             "name":"color_34BAF3",
+            "color":"#34BAF3",
+            "rgb":"R52 G:186 B:243",
+            "cmyk":"C:64 M:10 Y:1 K:0",
             "src":"color_34BAF3.svg"
           },
           {
             "name":"color_787878",
+            "color":"#787878",
+            "rgb":"R:120 G:120 B:120",
+            "cmyk":"C:58 M:49 Y:49 K:0",
             "src":"color_787878.svg"
           },          
           {
             "name":"color_222222",
+            "color":"#222222",
+            "rgb":"R:34 G:34 B:34",
+            "cmyk":"C:80 M:75 Y:71 K:58",
             "src":"color_222222.svg"
           },
           {
             "name":"color_F64D4D",
+            "color":"#F64D4D",
+            "rgb":"R:246 G:77 B:77",
+            "cmyk":"C:3 M:80 Y:62 K:0",
             "src":"color_F64D4D.svg"
           },
           {
             "name":"color_FFFFFF",
+            "color":"#FFFFFF",
+            "rgb":"R:256 G:256 B:256",
+            "cmyk":"C:0 M:0 Y:0 K:0",
             "src":"color_FFFFFF.svg"
           }
         ]

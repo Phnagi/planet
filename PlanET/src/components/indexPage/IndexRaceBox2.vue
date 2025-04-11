@@ -158,23 +158,22 @@ onMounted(()=>{
         <div class="raceBox2_content">
             <div :class="['raceBox2_qrCodeBox',{raceBox2_qrAct:indexBox2_aniHandle},{raceBox2_qrUnAct:!indexBox2_aniHandle}]">
                 <div class="raceBox2_qrCodeImage">
-                    <img v-if="imageData_QR.data.length" :src="imageData_QR.data[1].src" alt="">
+                    <img v-if="imageData_QR.data.length" :src="imageData_QR.data[3].src" alt="">
                 </div>
                 <div class="raceBox2_qrCodeText">
-                    <h5 v-if="imageData_QR.data.length" class="tw">{{ imageData_QR.data[1].text_tw }}</h5>
-                    <h5 v-if="imageData_QR.data.length" class="en">{{ imageData_QR.data[1].text_en }}</h5>
+                    <h5 v-if="imageData_QR.data.length" class="tw">{{ imageData_QR.data[3].text_tw }}</h5>
+                    <h5 v-if="imageData_QR.data.length" class="en">{{ imageData_QR.data[3].text_en }}</h5>
                 </div>
             </div>
-            <a href=""  class="raceBox2_textBox">
+            <a href="https://youtu.be/p99WEaJeUOs?si=BqgenGe39G0txmkc"  class="raceBox2_textBox">
                 <div class="raceBox2_titleBox">
-                    <h2 class="tw">UI原型設計</h2>
-                    <h2 class="en">UI design</h2>
+                    <h2 class="tw">概念影片</h2>
+                    <h2 class="en">concept video</h2>
                 </div>
                     <div class="raceBox2_contentBox">
                         <p class="tw">
-                                        應用程式的原型設計，採用簡約指示的設計風格，
-                                        希望能像指示設計一樣，引導使用者並慢慢的改變使用者的生活方式，
-                                        讓環保意識提高。
+                            這部影片講解了我們的核心理念，希望透過這段影片能全面展現我們的價值及產品的特色，
+                            讓觀眾能夠更深入地了解我們的目標和努力的方向。這部影片將為您提供豐富的信息，並幫助您更好地認識我們。
                         </p>
                         <div class="raceBox2_contentIcon">
                             <DynamicIcon name="arrow_right" />
@@ -285,7 +284,7 @@ onMounted(()=>{
                 display: flex;
                 flex-direction: column;
                 order: 2;
-                justify-content: space-between;
+                justify-content: flex-start;
                 // background-color: antiquewhite;
                 //raceBox2_qr animation................................................................................
                     transition: opacity 0.5s ease-in-out 0s , transform 1s ease-in-out 0.2s;
@@ -346,7 +345,7 @@ onMounted(()=>{
                     flex-direction: column;
                     position: relative;
                     width: 200px;
-                    top: -20px;
+                    top: 15px;
                     @media(min-width: 767px) and (max-width: 1024px){
                         width: 150px;
                         // display: none;

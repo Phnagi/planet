@@ -61,8 +61,8 @@ onMounted(()=>{
 
             <div class="qr_codeArray">
                 <!-- <img src="../assets/images/index/ig_QRcode.png" alt=""> -->
-                <div class="qrcode" v-for="(item,index) in imageData_QR.data" :key="item.id" >
-                    <a href="item.link">
+                <div class="qrcode" v-for="(item,index) in imageData_QR.data.slice(0, 3)" :key="item.id" >
+                    <a :href="item.link">
                         <div class="imageBox_1">
                             <img :src="item.src" alt="">
                         </div>

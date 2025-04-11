@@ -145,23 +145,22 @@ console.log("raceBox3_ContentDom",raceBox3_ContentDom)
         <div class="raceBox3_content">
             <div :class="['raceBox3_qrCodeBox',{raceBox3_qrAct:indexBox3_aniHandle},{raceBox3_qrUnAct:!indexBox3_aniHandle}]">
                 <div class="raceBox3_qrCodeImage">
-                    <img v-if="imageData_QR.data.length" :src="imageData_QR.data[2].src" alt="">
+                    <img v-if="imageData_QR.data.length" :src="imageData_QR.data[4].src" alt="">
                 </div>
                 <div class="raceBox3_qrCodeText">
-                    <h5 v-if="imageData_QR.data.length" class="tw">{{ imageData_QR.data[2].text_tw }}</h5>
-                    <h5 v-if="imageData_QR.data.length" class="en">{{ imageData_QR.data[2].text_en }}</h5>
+                    <h5 v-if="imageData_QR.data.length" class="tw">{{ imageData_QR.data[4].text_tw }}</h5>
+                    <h5 v-if="imageData_QR.data.length" class="en">{{ imageData_QR.data[4].text_en }}</h5>
                 </div>
         </div>
-            <a href=""  class="raceBox3_textBox">
+            <a href="https://youtu.be/k1GvqpMOfGs?si=qd6WkA3IrOkliRjd"  class="raceBox3_textBox">
                 <div class="raceBox3_titleBox">
                     <h2 class="tw">操作影片</h2>
-                    <h2 class="en">UI design</h2>
+                    <h2 class="en">instructional video</h2>
                 </div>
                     <div class="raceBox3_contentBox">
                         <p class="tw">
-                                        應用程式的原型設計，採用簡約指示的設計風格，
-                                        希望能像指示設計一樣，引導使用者並慢慢的改變使用者的生活方式，
-                                        讓環保意識提高。
+                            這部影片將會帶領大家深入探索應用程式的每個功能。我們希望透過這段影片，不僅能幫助使用者快速上手
+                            ，還能讓大家全面了解我們產品的核心價值及其帶來的便利與效益。
                         </p>
                         <div class="raceBox3_contentIcon">
                             <DynamicIcon name="arrow_right" />
@@ -279,7 +278,7 @@ console.log("raceBox3_ContentDom",raceBox3_ContentDom)
                 display: flex;
                 flex-direction: column;
                 order: 1;
-                justify-content: space-between;
+                justify-content: flex-start;
                 // background-color: antiquewhite;
 
                 //raceBox3_qr animation................................................................................
@@ -336,7 +335,7 @@ console.log("raceBox3_ContentDom",raceBox3_ContentDom)
                     flex-direction: column;
                     position: relative;
                     width: 200px;
-                    top: -20px;
+                    top: 15px;
                     order: 2;
                     @media(min-width: 767px) and (max-width: 1024px){
                         order: 1;

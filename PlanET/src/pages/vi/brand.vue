@@ -82,21 +82,22 @@ onMounted(()=>{
 </script>
 
 <template>
-    <div class="wrapper">
-        <h1>{{VI_index_textdata.title_tw}}</h1>
-        <img v-if="VI_index_image.length" :src="VI_index_image[0].src" alt="">
+    <div class="vi_index">
+            brand
     </div>
 
 </template>
 
 <style scoped lang="scss"  >
-    .wrapper {
+    .vi_index {
         max-width: 1280px;
-        height: 100dvh;
+        height:auto;
         padding: 100px 80px 60px 80px;
-        h1{
-            font-size: 100px;
-            color: black;
+        .mainImgBox{
+            
+        }
+        .textBox{
+
         }
     
     }
