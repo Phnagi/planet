@@ -162,8 +162,8 @@ console.log("raceBox3_ContentDom",raceBox3_ContentDom)
                 </div>
                     <div class="raceBox3_contentBox">
                         <p class="tw">
-                            這部影片將會帶領大家深入探索應用程式的每個功能。我們希望透過這段影片，不僅能幫助使用者快速上手
-                            ，還能讓大家全面了解我們產品的核心價值及其帶來的便利與效益。
+                            這部影片將會帶領大家深入探索應用程式的每個功能。我們希望透過這段影片幫助使用者快速上手
+                            ，以及讓大家更了解我們的核心價值。
                         </p>
                         <div class="raceBox3_contentIcon">
                             <DynamicIcon name="arrow_right" />
@@ -225,7 +225,7 @@ console.log("raceBox3_ContentDom",raceBox3_ContentDom)
                 order: 2;
                 @media(max-height: 800px){
                     width: 100%;
-                    padding: 100px 0px 0px 0px;
+                    padding: 20px 0px 0px 0px;
                 }   
             }
             @media (max-width: 767px){
@@ -264,7 +264,7 @@ console.log("raceBox3_ContentDom",raceBox3_ContentDom)
                 @media(max-height: 800px){
                     flex-direction: row;
                     width: 100%;
-                    
+                    padding: 40px 0px 40px 0px;//30是跟上面90-60=40
                 }   
             }
             @media (max-width: 767px){
@@ -368,7 +368,7 @@ console.log("raceBox3_ContentDom",raceBox3_ContentDom)
                 flex-direction: column;
                 order: 1;
                 @media(min-width: 767px) and (max-width: 1024px){
-                    width: 360px;
+                    width: 400px;
                     position: relative;
                     top: -18px;
 

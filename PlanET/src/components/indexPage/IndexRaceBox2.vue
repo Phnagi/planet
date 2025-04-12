@@ -176,7 +176,7 @@ onMounted(()=>{
                     <div class="raceBox2_contentBox">
                         <p class="tw">
                             這部影片講解了我們的核心理念，希望透過這段影片能全面展現我們的價值及產品的特色，
-                            讓觀眾能夠更深入地了解我們的目標和努力的方向。這部影片將為您提供豐富的信息，並幫助您更好地認識我們。
+                            讓觀眾能夠更深入地了解我們的目標和努力的方向。
                         </p>
                         <div class="raceBox2_contentIcon">
                             <DynamicIcon name="arrow_right" />
@@ -384,7 +384,7 @@ onMounted(()=>{
 
                 //平板
                 @media(min-width: 767px) and (max-width: 1024px){
-                    width: 360px;
+                    width: 400px;
                     position: relative;
                     top: -18px;
 

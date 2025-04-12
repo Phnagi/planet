@@ -89,7 +89,7 @@ onMounted(()=>{
                     <h2 class="tw">{{VI_brand_textdata.title_tw}}</h2>
                     <h2 class="en">{{VI_brand_textdata.title_en}}</h2>
                 </div>
-                <p class="tw">{{VI_brand_textdata.text}}></p>
+                <p class="tw">{{VI_brand_textdata.text}}</p>
            </div>
            <div class="brandItemArea">
                 <div class="brandItem" v-for="(item,idx) in VI_brand_inner " :key="item.name">

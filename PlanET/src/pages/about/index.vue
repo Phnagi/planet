@@ -531,7 +531,8 @@ onMounted(() => {
 
                 }
                 img{
-                    width: 320px;
+                    width: 38dvh;
+                    max-width:300px ;
                     position:relative;
                     // bottom: -20px;
                     @media(min-width: 767px) and (max-width: 1024px){
