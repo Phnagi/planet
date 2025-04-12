@@ -139,11 +139,14 @@ console.log("raceBox3_ContentDom",raceBox3_ContentDom)
 
 <template>
     <div ref="raceBox3_Content" class="raceBox3_Content">
-        <div :class="['raceBox3_video',{raceBox3_videoAct:indexBox3_aniHandle},{raceBox3_videoUnAct:!indexBox3_aniHandle}]">
+        <!-- <div :class="['raceBox3_video',{raceBox3_videoAct:indexBox3_aniHandle},{raceBox3_videoUnAct:!indexBox3_aniHandle}]">
+            <video v-if="video_concept.data.length" autoplay muted loop :src="video_concept.data[1].src"></video>
+        </div> -->
+        <div :class="['raceBox3_video',{raceBox3_videoAct:true},{raceBox3_videoUnAct:!true}]">
             <video v-if="video_concept.data.length" autoplay muted loop :src="video_concept.data[1].src"></video>
         </div>
         <div class="raceBox3_content">
-            <div :class="['raceBox3_qrCodeBox',{raceBox3_qrAct:indexBox3_aniHandle},{raceBox3_qrUnAct:!indexBox3_aniHandle}]">
+            <div :class="['raceBox3_qrCodeBox',{raceBox3_qrAct:true},{raceBox3_qrUnAct:!true}]">
                 <div class="raceBox3_qrCodeImage">
                     <img v-if="imageData_QR.data.length" :src="imageData_QR.data[4].src" alt="">
                 </div>

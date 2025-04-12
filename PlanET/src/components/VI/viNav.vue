@@ -156,11 +156,17 @@ onMounted(()=>{
             }
             li{
                 a{
-                    color: $color-gray_1;
+            
                     text-decoration: none;
                     transition: 0.2s ease-in-out;
                     &.router-link-active{
-                        color: $color-text;
+                      
+                        h5{
+                            color: $color-text;
+                        }
+                    }
+                    h5{
+                        color: $color-gray_1 ;
                     }
                 }
             }

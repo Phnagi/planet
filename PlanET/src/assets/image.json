@@ -64,6 +64,28 @@
           "type": "image",
           "src": "phone_home.png"
         }
+      ],
+      "gif":[
+        {
+          "name":"walk",
+          "src":"walk.gif"
+        },
+        {
+          "name":"bike",
+          "src":"bike.gif"
+        },
+        {
+          "name":"bus",
+          "src":"bus.gif"
+        },
+        {
+          "name":"train",
+          "src":"train.gif"
+        },
+        {
+          "name":"hsr",
+          "src":"hsr.gif"
+        }
       ]
     },
     "footer":{
@@ -934,23 +956,32 @@
         ]
       },
       "brand":{
-        "title_tw":"顏色",
-        "title_en":"color",
-        "text":"主色調我們選用綠色 (#43B71B) 來代表地球和環保，藍色 (#33B8F2) 則代表著海洋和降溫，希望藉由環保行動可以讓地球的溫度下降。",
+        "title_tw":"周邊設計",
+        "title_en":"Brand Collateral",
+        "text":"周邊以主色調的綠色來做為設計，象徵著自然與生態，讓人感受到大自然。設計中大量使用輔助圖形來增強視覺效果，並傳達設計的理念。此外，以簡約及現代的設計風格來呈現，避免使用過多的元素，使整體視覺更加清晰。",
         "text2":"",
         "title2_tw":"藍色與綠色",
         "title2_en":"Blue and green",
         "image":[
           {
             "name":"work_ID",
+            "title_tw":"工作證",
+            "title_en":"Work ID",
+            "text":"工作證使用icon和輔助圖形來製作，利用不同的圖形來幫助大家快速辨識團隊中的一個人。",
             "src":"work_ID.jpg"
           },
           {
             "name":"business_card",
+            "title_tw":"名片",
+            "title_en":"business card",
+            "text":"名片形式分成直式和橫式，一面以整面輔助圖形來設計，加強大家對於App的印象 ; 另一面則展示團隊資訊。",
             "src":"business_card.jpg"
           },
           {
             "name":"invitation",
+            "title_tw":"邀請函",
+            "title_en":"invitation",
+            "text":"利用icon及設計風格進行邀請函設計。",
             "src":"invitation.jpg"
           }
 

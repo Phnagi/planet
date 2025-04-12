@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router';
 import axios from 'axios';
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import { onMounted, reactive, ref,watch } from 'vue';
+import { onMounted, onUnmounted, reactive, ref,watch } from 'vue';
 import Lenis from 'lenis'
 
 import ImageData from '@/assets/image.json';
@@ -13,6 +13,11 @@ import DynamicIcon from '@/components/icons/DynamicIcon.vue';
 gsap.registerPlugin(ScrollTrigger)
 //存放api data
 let imageData_QR = reactive({data:[]});
+let gifData = reactive({});
+let useGif = ref({});
+const randomNumber = ref(0); // 當前的隨機數
+let previousNumber = null;   // 前一次的隨機數
+let giftimer =null //計時器
 // let imageData_UIimage = reactive({data:[]});
 
 
@@ -24,7 +29,37 @@ const imageMap = import.meta.glob(
     import: 'default',
   }
 );
+const gifMap = import.meta.glob(
+  '@/assets/gif/index/*.{png,jpg,jpeg,svg,webp,gif}',
+  {
+    eager: true,
+    import: 'default',
+  }
+);
+// console.log("gifMap",gifMap)
 
+//指派到useGif
+let changeGif = (idx)=>{
+    // Object.assign(useGif, gifData[idx]);
+    useGif.value = gifData[idx];
+    // VI_color_Color.value = contentData_viColor.image;
+    console.log(useGif)
+};
+
+//隨機
+function generateRandom() {
+//   randomNumber.value = Math.floor(Math.random() * 5); // 0 到 4
+    let newNumber;
+    do {
+        newNumber = Math.floor(Math.random() * 5); // 0 到 4
+    } while (newNumber === previousNumber);
+
+    previousNumber = newNumber;
+    randomNumber.value = newNumber;
+
+    changeGif(newNumber);
+
+}
 onMounted(()=>{
    //data.......................................................................
 
@@ -34,15 +69,26 @@ onMounted(()=>{
         ...item,
         src: imageMap[`/src/assets/images/index/${item.src}`]
     }))
+    gifData = ImageData.index.gif.map(item => ({
+        ...item,
+        src: gifMap[`/src/assets/gif/index/${item.src}`]
+    }))
 
 
     // imageData_QR.data = ImageData.index.QRcode;
-    console.log("imageData_QR",imageData_QR.data);
+    console.log("gifData",gifData);
+    useGif.value = gifData[0];
     watch(() => imageData_QR.data, (newData) => {
         console.log("imageData_UIimage 已更新", newData);
     });
+    watch(() => gifData, (newData) => {
+        console.log("imageData_UIimage 已更新", newData);
+    });
 
-    
+     giftimer =setInterval(generateRandom,3000)
+});
+onUnmounted(()=>{
+    clearInterval(giftimer); // 清除計時器
 });
 </script>
 
@@ -51,7 +97,8 @@ onMounted(()=>{
         <div  class="wrapperInner">
             <div class="iconBox_1">
                 <div class="icon">
-                    <DynamicIcon name="walk" />
+                    <!-- <DynamicIcon name="walk" /> -->
+                     <img :src="useGif.src" alt="">
                 </div>
                 <div class="titleBox_1">
                     <h1 class="tw">星球計畫 </h1>
@@ -119,6 +166,13 @@ onMounted(()=>{
                 height: 40dvh;//調整高
                 position: relative;
                 display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 100%;
+                    border: none;
+                    box-shadow: none;
+                }
                 @media(min-width: 767px) and (max-width: 1024px){
                     width: 40dvh;//調整寬
                     height: 40dvh;//調整高

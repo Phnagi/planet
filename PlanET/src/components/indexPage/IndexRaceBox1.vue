@@ -113,6 +113,9 @@ onMounted(()=>{
 
 <template>
     <div ref="raceBox1_Content" class="raceBox1_Content">
+        <!-- <div :class="['raceBox1_image',{raceBox1_imageAct:indexBox1_aniHandle},{raceBox1_imageUnAct:!indexBox1_aniHandle}]">
+            <img v-if="imageData_UIimage.data.length" :src="imageData_UIimage.data[0].src" alt="">              
+        </div> -->
         <div :class="['raceBox1_image',{raceBox1_imageAct:indexBox1_aniHandle},{raceBox1_imageUnAct:!indexBox1_aniHandle}]">
             <img v-if="imageData_UIimage.data.length" :src="imageData_UIimage.data[0].src" alt="">              
         </div>
@@ -178,7 +181,7 @@ onMounted(()=>{
             order: 1;
             // background: cadetblue;
             //raceBox1_image animation................................................................................
-                transition: opacity 0.5s ease-in-out 0s , transform 1s ease-in-out 0.2s;
+                transition: opacity 0.2s ease-in-out 0s , transform 0.5s ease-in-out 0.2s;
                 &.raceBox1_imageAct{
                     opacity: 1;
                     transform: translateY(0dvh);
@@ -252,7 +255,7 @@ onMounted(()=>{
                 display: flex;
                 flex-direction: column;
                 //QR animation...................................................................................
-                    transition: opacity 0.5s ease-in-out 0s , transform 1s ease-in-out 0.2s;
+                    transition: opacity 0.5s ease-in-out 0s , transform 0.5s ease-in-out 0.2s;
                     &.raceBox1_QRAct{
                         opacity: 1;
                         transform: translateY(0dvh);

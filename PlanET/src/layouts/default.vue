@@ -85,4 +85,10 @@ gsap.registerPlugin(ScrollTrigger);
     //     height: 100dvh;
     //     width: 100%;
     // }
+    body{
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+    }
 </style>

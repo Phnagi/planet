@@ -152,11 +152,14 @@ onMounted(()=>{
 
 <template>
     <div ref="raceBox2_Content" class="raceBox2_Content">
-        <div :class="['raceBox2_video',{raceBox2_videoAct:indexBox2_aniHandle},{raceBox2_videoUnAct:!indexBox2_aniHandle}]">
+        <!-- <div :class="['raceBox2_video',{raceBox2_videoAct:indexBox2_aniHandle},{raceBox2_videoUnAct:!indexBox2_aniHandle}]">
+            <video v-if="video_concept.data.length" autoplay muted loop :src="video_concept.data[0].src"></video>
+        </div> -->
+        <div :class="['raceBox2_video',{raceBox2_videoAct:true},{raceBox2_videoUnAct:!true}]">
             <video v-if="video_concept.data.length" autoplay muted loop :src="video_concept.data[0].src"></video>
         </div>
         <div class="raceBox2_content">
-            <div :class="['raceBox2_qrCodeBox',{raceBox2_qrAct:indexBox2_aniHandle},{raceBox2_qrUnAct:!indexBox2_aniHandle}]">
+            <div :class="['raceBox2_qrCodeBox',{raceBox2_qrAct:true},{raceBox2_qrUnAct:!true}]">
                 <div class="raceBox2_qrCodeImage">
                     <img v-if="imageData_QR.data.length" :src="imageData_QR.data[3].src" alt="">
                 </div>
