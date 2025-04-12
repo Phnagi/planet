@@ -21,7 +21,8 @@ let footer_snap ;
 //存放api data
 let footerLogo = reactive({data:[]});
 let footerQrcode = reactive({data:[]});
-
+let gifData = reactive({});
+let useGif = ref({});
 //傳給子組件
 
 // 使用 Vite 的 glob 匯入圖片（會轉成 { [路徑]: 圖片URL }）
@@ -29,8 +30,20 @@ const imageMap = {
   ...import.meta.glob('@/assets/images/index/*.{png,jpg,svg,webp}', { eager: true, import: 'default' }),
   ...import.meta.glob('@/assets/images/footer/*.{png,jpg,svg,webp}', { eager: true, import: 'default' })
 }
-
-
+const gifMap = import.meta.glob(
+  '@/assets/gif/index/*.{png,jpg,jpeg,svg,webp,gif}',
+  {
+    eager: true,
+    import: 'default',
+  }
+);
+//拿取gif資料
+let changeGif = (idx)=>{
+    // Object.assign(useGif, gifData[idx]);
+    useGif.value = gifData[0];
+    // VI_color_Color.value = contentData_viColor.image;
+    // console.log(useGif)
+};
 onMounted(()=>{
     let footerDom = footer.value;
 
@@ -91,13 +104,22 @@ onMounted(()=>{
         ...item,
         src: imageMap[`/src/assets/images/footer/${item.src}`]
     }))
+    gifData = ImageData.index.gif.map(item => ({
+        ...item,
+        src: gifMap[`/src/assets/gif/index/${item.src}`]
+    }))
 
     watch(() => footerLogo.data, (newData) => {
-        console.log("imageData_UIimage 已更新", newData);
+        console.log("footerLogo 已更新", newData);
     });
     watch(() => footerQrcode.data, (newData) => {
-        console.log("imageData_UIimage 已更新", newData);
+        console.log("footerQrcode 已更新", newData);
     });
+    watch(() => gifData, (newData) => {
+        console.log("gifData 已更新", newData);
+    });
+    changeGif();
+    console.log("gifData", gifData);
 });
 </script>
 
@@ -140,7 +162,8 @@ onMounted(()=>{
 
             <div class="iconAbsoluteBox">
                 <div class="iconAbsolute">
-                    <DynamicIcon name="walk" />
+                    <!-- <DynamicIcon name="walk" /> -->
+                    <img :src="useGif.src" alt="">
                 </div>
             </div>
 
@@ -311,6 +334,7 @@ onMounted(()=>{
                 display: flex;
                 justify-content: flex-end;
                 align-items: flex-start;
+
                 @media(min-width: 767px) and (max-width: 1024px){
                     justify-content: center;
                     align-items: center;
@@ -321,18 +345,33 @@ onMounted(()=>{
                 }
                 .iconAbsolute{
                     width: 300px;
+                    height: 300px;
                     position: relative;
                     top: 110px;
                     right: 0;
+                    overflow: hidden;
+                    // background: cadetblue;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        width: 105%;
+                        border: none;
+                        box-shadow: none;
+                    }
                     @media(min-width: 767px) and (max-width: 1024px){
-                        width: 350px;
+                        width: 35dvh;
+                        height: 35dvh;
                         top: 0px;
                         left: 20px;
+                        overflow: hidden;
                     }
                     @media (max-width: 767px){
                         width: 30dvh;
+                        height: 30dvh;
                         top: -20px;
                         left: 10px;
+                        overflow: hidden;
                     }
                 }
             }

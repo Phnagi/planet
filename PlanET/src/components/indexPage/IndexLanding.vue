@@ -43,7 +43,7 @@ let changeGif = (idx)=>{
     // Object.assign(useGif, gifData[idx]);
     useGif.value = gifData[idx];
     // VI_color_Color.value = contentData_viColor.image;
-    console.log(useGif)
+    // console.log(useGif)
 };
 
 //隨機
@@ -168,18 +168,21 @@ onUnmounted(()=>{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                overflow: hidden;
                 img{
-                    width: 100%;
+                    width: 101%;
                     border: none;
                     box-shadow: none;
                 }
                 @media(min-width: 767px) and (max-width: 1024px){
                     width: 40dvh;//調整寬
                     height: 40dvh;//調整高
+                    overflow: hidden;
                 }
                 @media (max-width: 767px){
                     width: 35dvh;//調整寬
                     height: 35dvh;//調整高
+                    overflow: hidden;
                 }
                 // background-color: antiquewhite;
             }

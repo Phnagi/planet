@@ -8,6 +8,7 @@
         walk: () => import('@/assets/icon/walk.svg?raw'),
         walk2: () => import('@/assets/icon/walk2.svg?raw'),
         walk2_gray: () => import('@/assets/icon/walk2_gray.svg?raw'),
+        walk_wrong: () => import('@/assets/icon/walk_wrong.svg?raw'),
         store: () => import('@/assets/icon/store.svg?raw'),
         store_gray: () => import('@/assets/icon/store_gray.svg?raw'),
         train: () => import('@/assets/icon/train.svg?raw'),

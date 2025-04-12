@@ -1,5 +1,11 @@
 import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 const app = express();
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 app.use(express.json());
 app.use(express.static('PlanET/dist'));
 
@@ -17,7 +23,9 @@ app.get('/api/pirates/:id',(req,res)=>{
         res.send({data:pirate});
     }
 });
-
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'PlanET/dist/index.html'));
+});
 
 function getPirate(id){
     const pirates =[
