@@ -16,4 +16,17 @@
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
+  <script>
+    window.addEventListener('error', function(e) {
+      if (e.target.tagName === 'SCRIPT' || e.target.tagName === 'LINK') {
+        // 清快取 + 重載
+        localStorage.clear();
+        sessionStorage.clear();
+        caches?.keys().then(function(names) {
+          for (let name of names) caches.delete(name);
+        });
+        location.reload(true);
+      }
+    }, true);
+  </script>
 </html>

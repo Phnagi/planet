@@ -7,7 +7,8 @@ const app = express();
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 app.use(express.json());
-app.use(express.static('PlanET/dist'));
+// app.use(express.static('PlanET/dist'));
+app.use(express.static(path.join(__dirname, 'PlanET/dist')));
 
 const port = process.env.PORT || 8080 ;
 app.listen(port , () =>{
@@ -23,9 +24,12 @@ app.get('/api/pirates/:id',(req,res)=>{
         res.send({data:pirate});
     }
 });
+// app.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'PlanET/dist/index.html'));
+// });
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'PlanET/dist/index.html'));
-});
+    res.sendFile(path.join(__dirname, 'PlanET/dist', 'index.html'));
+  });
 
 function getPirate(id){
     const pirates =[
