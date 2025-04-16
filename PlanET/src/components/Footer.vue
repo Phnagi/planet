@@ -136,7 +136,7 @@ onMounted(()=>{
                     <div class="footerContentBox">
                         <div class="igBox">
                             <h3 class="en">IG</h3>
-                            <p class="en">PlanET</p>
+                            <p class="en">planET.114</p>
                         </div>
                         <div class="emailBox">
                             <h3 class="en">email</h3>
@@ -145,7 +145,7 @@ onMounted(()=>{
                     </div>
                     <div class="footerQRcodeBox">
                         <div class="footerQRcode" v-for="(item,index) in footerQrcode.data.slice(0, 3)" :key="item.id">
-                            <a href="item.link">
+                            <a :href="item.link">
                                 <div class="footer_QRimageBox">
                                     <img :src="item.src" alt="">
                                 </div>
@@ -217,7 +217,8 @@ onMounted(()=>{
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: space-between;                
+                z-index: 1;
                 .footerTitleBox{
                     width: 50%;
                     img{
@@ -334,7 +335,7 @@ onMounted(()=>{
                 display: flex;
                 justify-content: flex-end;
                 align-items: flex-start;
-
+                z-index: 0;
                 @media(min-width: 767px) and (max-width: 1024px){
                     justify-content: center;
                     align-items: center;

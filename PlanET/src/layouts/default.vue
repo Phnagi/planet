@@ -1,6 +1,6 @@
 <script setup>
-import { onMounted, ref } from 'vue';
-import { RouterLink, RouterView } from 'vue-router'
+import { onMounted, ref ,computed } from 'vue';
+import { RouterLink, RouterView ,useRoute } from 'vue-router'
 //components
 import hamberger from '@/components/icons/hamberger.vue';
 import close from '@/components/icons/close.vue';
@@ -15,6 +15,12 @@ import Lenis from 'lenis'
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+//判斷是否要footer跟navbar
+const route = useRoute()
+const hideNavAndFooter = computed(() =>
+  ['/qrtask', '/WrongPage', '/CorrectPage'].includes(route.path)
+)
     onMounted(() => {
 
 
@@ -50,13 +56,13 @@ gsap.registerPlugin(ScrollTrigger);
 <template>
     
 
-    <Navbar/> 
+    <Navbar v-if="!hideNavAndFooter"/> 
         <!-- <hamberger  :sizeWidth="22"  :sizeHeight="20"/> -->
         <!-- <close  :sizeWidth="37"  :sizeHeight="37"/> -->
     
 
     <RouterView />
-    <Footer/> 
+    <Footer v-if="!hideNavAndFooter"/> 
 </template>
 
 <style lang="scss"  >
